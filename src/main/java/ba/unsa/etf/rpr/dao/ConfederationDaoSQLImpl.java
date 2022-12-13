@@ -1,14 +1,19 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.dao;
+
+
+
+import ba.unsa.etf.rpr.dao.ConfederationDao;
+import ba.unsa.etf.rpr.domain.Confederation;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TeamDaoSQLImpl implements TeamDao{
+public class ConfederationDaoSQLImpl implements ConfederationDao {
 
     private Connection connection;
 
-    public TeamDaoSQLImpl(){
+    public ConfederationDaoSQLImpl(){
         try {
             this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "root");
         } catch (Exception e) {
@@ -17,21 +22,19 @@ public class TeamDaoSQLImpl implements TeamDao{
     }
 
     @Override
-    public Team getById(int id) {
+    public Confederation getById(int id) {
         String query = "SELECT * FROM quotes WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) { // result set is iterator.
-                Team team = new Team();
-                team.setId(rs.getInt("id"));
-                team.setTeamName(rs.getString("team_name"));
-                team.setAbbreviation(rs.getString("abbreviation"));
-                team.setGroupId(rs.getInt("group_id"));
-                team.setConfederationId(rs.getInt("confederation_id"));
+                Confederation confederation = new Confederation();
+                confederation.setId(rs.getInt("id"));
+                confederation.setFullName(rs.getString("full_name"));
+                confederation.setAbbreviation(rs.getString("abbreviation"));
                 rs.close();
-                return team;
+                return confederation;
             } else {
                 return null; // if there is no elements in the result set return null
             }
@@ -43,13 +46,13 @@ public class TeamDaoSQLImpl implements TeamDao{
 
 
     @Override
-    public Team add(Team item) {
+    public Confederation add(Confederation item) {
         return null;
     }
 
 
     @Override
-    public Team update(Team item) {
+    public Confederation update(Confederation item) {
         return null;
     }
 
@@ -60,7 +63,7 @@ public class TeamDaoSQLImpl implements TeamDao{
     }
 
     @Override
-    public List<Team> getAll() {
+    public List<Confederation> getAll() {
         return null;
     }
 
@@ -70,20 +73,18 @@ public class TeamDaoSQLImpl implements TeamDao{
      * @author ahajro2
      */
 
-    public Team returnTeamForId(int id) {
+    public Confederation returnCategoryForId(int id) {
         String query = "SELECT * FROM categories WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                Team t = new Team();
-                t.setId(rs.getInt(1));
-                t.setTeamName(rs.getString(2));
-                t.setAbbreviation(rs.getString(3));
-                t.setGroupId(rs.getInt(4));
-                t.setConfederationId(rs.getInt(5));
-                return t;
+                Confederation c = new Confederation();
+                c.setId(rs.getInt(1));
+                c.setFullName(rs.getString(2));
+                c.setAbbreviation(rs.getString(3));
+                return c;
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -98,24 +99,22 @@ public class TeamDaoSQLImpl implements TeamDao{
      */
 
     @Override
-    public List<Team> searchByText(String text) {
+    public List<Confederation> searchByText(String text) {
         //mora sa concat jer inace nece raditi jer radi sa key chars
         String query = "SELECT * FROM quotes WHERE quote LIKE concat('%', ?, '%')";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1, text);
             ResultSet rs = stmt.executeQuery();
-            ArrayList<Team> teamLista = new ArrayList<>();
+            ArrayList<Confederation> confederationLista = new ArrayList<>();
             while (rs.next()) {
-                Team t = new Team();
-                t.setId(rs.getInt(1));
-                t.setTeamName(rs.getString(2));
-                t.setAbbreviation(rs.getString(3));
-                t.setGroupId(rs.getInt(4));
-                t.setConfederationId(rs.getInt(5));
-                teamLista.add(t);
+                Confederation q = new Confederation();
+                q.setId(rs.getInt(1));
+                q.setFullName(rs.getString(2));
+                q.setAbbreviation(rs.getString(3));
+                confederationLista.add(q);
             }
-            return teamLista;
+            return confederationLista;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -124,29 +123,27 @@ public class TeamDaoSQLImpl implements TeamDao{
 
 
     /**
-     * @param team search string for quotes
+     * @param confederation search string for quotes
      * @return list of quotes
      * @author ahajro2
      */
 
     @Override
-    public List<Team> searchByTeam(Team team) {
-        String query = "SELECT * FROM quotes WHERE team = ?";
+    public List<Confederation> searchByConfederation(Confederation confederation) {
+        String query = "SELECT * FROM quotes WHERE confederation = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setInt(1, team.getId());
+            stmt.setInt(1, confederation.getId());
             ResultSet rs = stmt.executeQuery();
-            ArrayList<Team> teamLista = new ArrayList<>();
+            ArrayList<Confederation> quoteLista = new ArrayList<>();
             while (rs.next()) {
-                Team t = new Team();
-                t.setId(rs.getInt(1));
-                t.setTeamName(rs.getString(2));
-                t.setAbbreviation(rs.getString(3));
-                t.setGroupId(rs.getInt(4));
-                t.setConfederationId(rs.getInt(5));
-                teamLista.add(t);
+                Confederation q = new Confederation();
+                q.setId(rs.getInt(1));
+                q.setFullName(rs.getString(2));
+                q.setAbbreviation(rs.getString(3));
+                quoteLista.add(q);
             }
-            return teamLista;
+            return quoteLista;
         } catch (SQLException e) {
             e.printStackTrace();
         }

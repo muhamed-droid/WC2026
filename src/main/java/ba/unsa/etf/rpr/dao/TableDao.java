@@ -1,23 +1,24 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.dao;
 
-import jdk.jfr.Category;
+import ba.unsa.etf.rpr.dao.Dao;
+import ba.unsa.etf.rpr.domain.Table;
 
 import java.util.List;
 
-public interface GroupDao extends Dao<Group> {
+public interface TableDao extends Dao<Table> {
     /**
      * Returns all quotes that contains given text.
      *
      * @param text search string for quotes
      * @return list of quotes
      */
-    List<Group> searchByText(String text);
+    List<Table> searchByText(String text);
 
     /**
      * Returns all quotes that contains given text.
      *
-     * @param group search string for quotes
+     * @param table search string for quotes
      * @return list of quotes
      */
-    List<Group> searchByGroup(Group group);
+    List<Table> searchByTable(Table table);
 }

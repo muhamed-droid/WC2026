@@ -1,6 +1,9 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.dao;
 
 
+
+import ba.unsa.etf.rpr.dao.Dao;
+import ba.unsa.etf.rpr.domain.Team;
 
 import java.util.List;
 
@@ -9,7 +12,7 @@ import java.util.List;
  *
  * @author Dino Keco
  */
-public interface TeamDao extends Dao<Team>{
+public interface TeamDao extends Dao<Team> {
 
     /**
      * Returns all quotes that contains given text.

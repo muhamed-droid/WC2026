@@ -1,8 +1,8 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
-public class Group {
+public class Table {
     private int id;
 
     public int getId() {
@@ -17,13 +17,8 @@ public class Group {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Group groups = (Group) o;
-        return id == groups.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+        Table tables = (Table) o;
+        return id == tables.id;
     }
 
     @Override
@@ -31,5 +26,10 @@ public class Group {
         StringBuilder povratni = new StringBuilder();
         povratni.append(id);
         return String.valueOf(povratni);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
