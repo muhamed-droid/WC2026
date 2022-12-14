@@ -11,7 +11,7 @@ public interface GroupDao extends Dao<Group> {
      * @param text search string for quotes
      * @return list of quotes
      */
-    List<Group> searchByText(String text);
+    //List<Group> searchByText(String text);
 
     /**
      * Returns all quotes that contains given text.

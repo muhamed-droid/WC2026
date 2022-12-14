@@ -47,13 +47,38 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
 
     @Override
     public Confederation add(Confederation item) {
+        String insert = "INSERT INTO confederations(abbreviation, fullName) VALUES(?)";
+        try{
+            PreparedStatement stmt = this.connection.prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, item.getFullName());
+            stmt.setString(2, item.getAbbreviation());
+            stmt.executeUpdate();
+
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next(); // we know that there is one key
+            item.setId(rs.getInt(1)); //set id to return it back
+            return item;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
         return null;
     }
 
 
     @Override
     public Confederation update(Confederation item) {
-        return null;
+        String insert = "UPDATE confederations SET name = ? WHERE id = ?";
+        try{
+            PreparedStatement stmt = this.connection.prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
+            stmt.setObject(1, item.getFullName());
+            stmt.setObject(2, item.getAbbreviation());
+            stmt.setObject(3, item.getId());
+            stmt.executeUpdate();
+            return item;
+        }catch (SQLException e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
 
@@ -73,7 +98,7 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
      * @author ahajro2
      */
 
-    public Confederation returnCategoryForId(int id) {
+    public Confederation returnConfederationForId(int id) {
         String query = "SELECT * FROM categories WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
@@ -93,18 +118,17 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
     }
 
     /**
-     * @param text search string for quotes
+     * @param abbreviation search string for quotes
      * @return list of quotes
      * @author ahajro2
      */
 
-    @Override
-    public List<Confederation> searchByText(String text) {
-        //mora sa concat jer inace nece raditi jer radi sa key chars
-        String query = "SELECT * FROM quotes WHERE quote LIKE concat('%', ?, '%')";
+    /*@Override
+    public List<Confederation> searchByAbbreviation(String abbreviation) {
+        String query = "SELECT * FROM confederations";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setString(1, text);
+            stmt.setString(1, abbreviation);
             ResultSet rs = stmt.executeQuery();
             ArrayList<Confederation> confederationLista = new ArrayList<>();
             while (rs.next()) {
@@ -119,7 +143,7 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
             e.printStackTrace();
         }
         return null;
-    }
+    } */
 
 
     /**

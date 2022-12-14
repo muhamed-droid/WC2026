@@ -11,7 +11,7 @@ public interface ConfederationDao extends Dao<Confederation> {
      * @param text search string for quotes
      * @return list of quotes
      */
-    List<Confederation> searchByText(String text);
+    //List<Confederation> searchByAbbreviation(String text);
 
     /**
      * Returns all quotes that contains given text.
@@ -19,5 +19,4 @@ public interface ConfederationDao extends Dao<Confederation> {
      * @param confederation search string for quotes
      * @return list of quotes
      */
-    //List<Confederation> searchByConfederation(Confederation confederation);
 }

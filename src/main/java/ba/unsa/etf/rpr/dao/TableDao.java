@@ -12,7 +12,7 @@ public interface TableDao extends Dao<Table> {
      * @param text search string for quotes
      * @return list of quotes
      */
-    List<Table> searchByText(String text);
+    //List<Table> searchByText(String text);
 
     /**
      * Returns all quotes that contains given text.
