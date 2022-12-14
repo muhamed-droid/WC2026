@@ -3,7 +3,8 @@ package ba.unsa.etf.rpr.domain;
 public class Team {
     private int id;
     private String teamName, abbreviation;
-    int groupId, confederationId;
+    Group group;
+    Confederation confederation;
 
     public int getId() {
         return id;
@@ -21,20 +22,21 @@ public class Team {
         this.abbreviation = abbreviation;
     }
 
-    public int getGroupId() {
-        return groupId;
+
+    public Group getGroup() {
+        return group;
     }
 
-    public void setGroupId(int groupId) {
-        this.groupId = groupId;
+    public void setGroup(Group group) {
+        this.group = group;
     }
 
-    public int getConfederationId() {
-        return confederationId;
+    public Confederation getConfederation() {
+        return confederation;
     }
 
-    public void setConfederationId(int confederationId) {
-        this.confederationId = confederationId;
+    public void setConfederation(Confederation confederation) {
+        this.confederation = confederation;
     }
 
     public String getTeamName() {

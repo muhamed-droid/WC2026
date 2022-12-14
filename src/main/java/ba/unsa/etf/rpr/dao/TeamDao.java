@@ -3,6 +3,8 @@ package ba.unsa.etf.rpr.dao;
 
 
 import ba.unsa.etf.rpr.dao.Dao;
+import ba.unsa.etf.rpr.domain.Confederation;
+import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.domain.Team;
 
 import java.util.List;
@@ -25,8 +27,16 @@ public interface TeamDao extends Dao<Team> {
     /**
      * Returns all quotes that contains given text.
      *
-     * @param team search string for quotes
+     * @param confederation search string for quotes
      * @return list of quotes
      */
-    List<Team> searchByTeam(Team team);
+    List<Team> searchByConfederation(Confederation confederation);
+
+    /**
+     * Returns all quotes that contains given text.
+     *
+     * @param group search string for quotes
+     * @return list of quotes
+     */
+    List<Team> searchByGroup(Group group);
 }

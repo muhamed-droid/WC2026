@@ -119,7 +119,7 @@ public class TableDaoSQLImpl implements TableDao {
      * @author ahajro2
      */
 
-    @Override
+    /*@Override
     public List<Table> searchByTable(Table table) {
         String query = "SELECT * FROM quotes WHERE table = ?";
         try {
@@ -137,5 +137,5 @@ public class TableDaoSQLImpl implements TableDao {
             e.printStackTrace();
         }
         return null;
-    }
+    } */
 }

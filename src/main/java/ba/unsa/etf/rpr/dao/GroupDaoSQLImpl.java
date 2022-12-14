@@ -70,16 +70,16 @@ public class GroupDaoSQLImpl implements GroupDao {
      * @author ahajro2
      */
 
-    public Confederation returnCategoryForId(int id) {
-        String query = "SELECT * FROM categories WHERE id = ?";
+    public Group returnGroupForId(int id) {
+        String query = "SELECT * FROM groups WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                Confederation c = new Confederation();
-                c.setId(rs.getInt(1));
-                return c;
+                Group g = new Group();
+                g.setId(rs.getInt(1));
+                return g;
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -121,7 +121,7 @@ public class GroupDaoSQLImpl implements GroupDao {
      * @author ahajro2
      */
 
-    @Override
+    /*@Override
     public List<Group> searchByGroup(Group group) {
         String query = "SELECT * FROM quotes WHERE group = ?";
         try {
@@ -139,5 +139,5 @@ public class GroupDaoSQLImpl implements GroupDao {
             e.printStackTrace();
         }
         return null;
-    }
+    } */
 }

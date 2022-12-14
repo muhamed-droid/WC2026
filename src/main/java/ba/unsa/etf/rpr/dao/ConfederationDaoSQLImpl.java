@@ -128,7 +128,7 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
      * @author ahajro2
      */
 
-    @Override
+    /*@Override
     public List<Confederation> searchByConfederation(Confederation confederation) {
         String query = "SELECT * FROM quotes WHERE confederation = ?";
         try {
@@ -148,5 +148,5 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
             e.printStackTrace();
         }
         return null;
-    }
+    } */
 }

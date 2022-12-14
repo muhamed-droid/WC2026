@@ -20,5 +20,5 @@ public interface TableDao extends Dao<Table> {
      * @param table search string for quotes
      * @return list of quotes
      */
-    List<Table> searchByTable(Table table);
+    //List<Table> searchByTable(Table table);
 }
