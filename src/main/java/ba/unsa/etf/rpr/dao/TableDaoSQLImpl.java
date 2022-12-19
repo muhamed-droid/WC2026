@@ -91,7 +91,7 @@ public class TableDaoSQLImpl implements TableDao {
      * @author ahajro2
      */
 
-    @Override
+    /*@Override
     public List<Table> searchByText(String text) {
         //mora sa concat jer inace nece raditi jer radi sa key chars
         String query = "SELECT * FROM quotes WHERE quote LIKE concat('%', ?, '%')";
@@ -110,7 +110,7 @@ public class TableDaoSQLImpl implements TableDao {
             e.printStackTrace();
         }
         return null;
-    }
+    } */
 
 
     /**

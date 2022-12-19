@@ -93,7 +93,7 @@ public class GroupDaoSQLImpl implements GroupDao {
      * @author ahajro2
      */
 
-    @Override
+    /*@Override
     public List<Group> searchByText(String text) {
         //mora sa concat jer inace nece raditi jer radi sa key chars
         String query = "SELECT * FROM quotes WHERE quote LIKE concat('%', ?, '%')";
@@ -112,7 +112,7 @@ public class GroupDaoSQLImpl implements GroupDao {
             e.printStackTrace();
         }
         return null;
-    }
+    }*/
 
 
     /**
