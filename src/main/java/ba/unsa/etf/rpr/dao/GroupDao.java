@@ -6,18 +6,18 @@ import java.util.List;
 
 public interface GroupDao extends Dao<Group> {
     /**
-     * Returns all quotes that contains given text.
+     * Returns all groups that contains given text.
      *
-     * @param text search string for quotes
-     * @return list of quotes
+     * @param text search string for groups
+     * @return list of groups
      */
     //List<Group> searchByText(String text);
 
     /**
-     * Returns all quotes that contains given text.
+     * Returns all groups that contains given text.
      *
-     * @param group search string for quotes
-     * @return list of quotes
+     * @param group search string for groups
+     * @return list of groups
      */
     //List<Group> searchByGroup(Group group);
 }

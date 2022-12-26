@@ -12,7 +12,7 @@ public class TableDaoSQLImpl implements TableDao {
 
     public TableDaoSQLImpl(){
         try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "root");
+            this.connection = DriverManager.getConnection("jdbc:mysql://sql.freedb.tech:3306/freedb_WC2026Base", "freedb_Muhamed-droid", "S#A2S3ceg*ReKGP");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -20,7 +20,7 @@ public class TableDaoSQLImpl implements TableDao {
 
     @Override
     public Table getById(int id) {
-        String query = "SELECT * FROM quotes WHERE id = ?";
+        String query = "SELECT * FROM tables WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -63,8 +63,8 @@ public class TableDaoSQLImpl implements TableDao {
     }
 
     /**
-     * @param id for searching category for quotes
-     * @return specific Category for specific quote from db
+     * @param id for searching category for tables
+     * @return specific Category for specific table from db
      * @author ahajro2
      */
 
@@ -86,15 +86,15 @@ public class TableDaoSQLImpl implements TableDao {
     }
 
     /**
-     * @param text search string for quotes
-     * @return list of quotes
+     * @param text search string for tables
+     * @return list of tables
      * @author ahajro2
      */
 
     /*@Override
     public List<Table> searchByText(String text) {
         //mora sa concat jer inace nece raditi jer radi sa key chars
-        String query = "SELECT * FROM quotes WHERE quote LIKE concat('%', ?, '%')";
+        String query = "SELECT * FROM tables WHERE table LIKE concat('%', ?, '%')";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1, text);
@@ -114,14 +114,14 @@ public class TableDaoSQLImpl implements TableDao {
 
 
     /**
-     * @param table search string for quotes
-     * @return list of quotes
+     * @param table search string for tables
+     * @return list of tables
      * @author ahajro2
      */
 
     /*@Override
     public List<Table> searchByTable(Table table) {
-        String query = "SELECT * FROM quotes WHERE table = ?";
+        String query = "SELECT * FROM tables WHERE table = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, table.getId());

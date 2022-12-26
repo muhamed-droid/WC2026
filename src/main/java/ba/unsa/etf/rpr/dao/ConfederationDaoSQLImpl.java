@@ -15,7 +15,7 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
 
     public ConfederationDaoSQLImpl(){
         try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "root");
+            this.connection = DriverManager.getConnection("jdbc:mysql://sql.freedb.tech:3306/freedb_WC2026Base", "freedb_Muhamed-droid", "S#A2S3ceg*ReKGP");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -23,7 +23,7 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
 
     @Override
     public Confederation getById(int id) {
-        String query = "SELECT * FROM quotes WHERE id = ?";
+        String query = "SELECT * FROM confederations WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -93,8 +93,8 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
     }
 
     /**
-     * @param id for searching category for quotes
-     * @return specific Category for specific quote from db
+     * @param id for searching category for confederations
+     * @return specific Category for specific team from db
      * @author ahajro2
      */
 
@@ -118,8 +118,8 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
     }
 
     /**
-     * @param abbreviation search string for quotes
-     * @return list of quotes
+     * @param abbreviation search string for confederations
+     * @return list of confederations
      * @author ahajro2
      */
 
@@ -147,27 +147,27 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
 
 
     /**
-     * @param confederation search string for quotes
-     * @return list of quotes
+     * @param confederation search string for confederations
+     * @return list of confederations
      * @author ahajro2
      */
 
     /*@Override
     public List<Confederation> searchByConfederation(Confederation confederation) {
-        String query = "SELECT * FROM quotes WHERE confederation = ?";
+        String query = "SELECT * FROM confederations WHERE confederation = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, confederation.getId());
             ResultSet rs = stmt.executeQuery();
-            ArrayList<Confederation> quoteLista = new ArrayList<>();
+            ArrayList<Confederation> teamLista = new ArrayList<>();
             while (rs.next()) {
                 Confederation q = new Confederation();
                 q.setId(rs.getInt(1));
                 q.setFullName(rs.getString(2));
                 q.setAbbreviation(rs.getString(3));
-                quoteLista.add(q);
+                teamLista.add(q);
             }
-            return quoteLista;
+            return teamLista;
         } catch (SQLException e) {
             e.printStackTrace();
         }

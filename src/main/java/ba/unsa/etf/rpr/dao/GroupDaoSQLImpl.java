@@ -14,7 +14,7 @@ public class GroupDaoSQLImpl implements GroupDao {
 
     public GroupDaoSQLImpl(){
         try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/root", "root", "root");
+            this.connection = DriverManager.getConnection("jdbc:mysql://sql.freedb.tech:3306/freedb_WC2026Base", "freedb_Muhamed-droid", "S#A2S3ceg*ReKGP");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -22,7 +22,7 @@ public class GroupDaoSQLImpl implements GroupDao {
 
     @Override
     public Group getById(int id) {
-        String query = "SELECT * FROM quotes WHERE id = ?";
+        String query = "SELECT * FROM groups WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -65,8 +65,8 @@ public class GroupDaoSQLImpl implements GroupDao {
     }
 
     /**
-     * @param id for searching category for quotes
-     * @return specific Category for specific quote from db
+     * @param id for searching category for groups
+     * @return specific Category for specific group from db
      * @author ahajro2
      */
 
@@ -88,15 +88,15 @@ public class GroupDaoSQLImpl implements GroupDao {
     }
 
     /**
-     * @param text search string for quotes
-     * @return list of quotes
+     * @param text search string for groups
+     * @return list of groups
      * @author ahajro2
      */
 
     /*@Override
     public List<Group> searchByText(String text) {
         //mora sa concat jer inace nece raditi jer radi sa key chars
-        String query = "SELECT * FROM quotes WHERE quote LIKE concat('%', ?, '%')";
+        String query = "SELECT * FROM groups WHERE group LIKE concat('%', ?, '%')";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setString(1, text);
@@ -116,14 +116,14 @@ public class GroupDaoSQLImpl implements GroupDao {
 
 
     /**
-     * @param group search string for quotes
-     * @return list of quotes
+     * @param group search string for groups
+     * @return list of groups
      * @author ahajro2
      */
 
     /*@Override
     public List<Group> searchByGroup(Group group) {
-        String query = "SELECT * FROM quotes WHERE group = ?";
+        String query = "SELECT * FROM groups WHERE group = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, group.getId());

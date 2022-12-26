@@ -7,18 +7,18 @@ import java.util.List;
 
 public interface TableDao extends Dao<Table> {
     /**
-     * Returns all quotes that contains given text.
+     * Returns all groups that contains given text.
      *
-     * @param text search string for quotes
-     * @return list of quotes
+     * @param text search string for groups
+     * @return list of groups
      */
     //List<Table> searchByText(String text);
 
     /**
-     * Returns all quotes that contains given text.
+     * Returns all groups that contains given text.
      *
-     * @param table search string for quotes
-     * @return list of quotes
+     * @param table search string for groups
+     * @return list of groups
      */
     //List<Table> searchByTable(Table table);
 }

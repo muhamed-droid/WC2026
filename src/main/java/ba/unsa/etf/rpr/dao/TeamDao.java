@@ -10,33 +10,33 @@ import ba.unsa.etf.rpr.domain.Team;
 import java.util.List;
 
 /**
- * Dao interface for Quote domain bean
+ * Dao interface for Team domain bean
  *
  * @author Dino Keco
  */
 public interface TeamDao extends Dao<Team> {
 
     /**
-     * Returns all quotes that contains given text.
+     * Returns all teams that contains given text.
      *
-     * @param text search string for quotes
-     * @return list of quotes
+     * @param text search string for teams
+     * @return list of teams
      */
     List<Team> searchByText(String text);
 
     /**
-     * Returns all quotes that contains given text.
+     * Returns all teams that contains given text.
      *
-     * @param confederation search string for quotes
-     * @return list of quotes
+     * @param confederation search string for teams
+     * @return list of teams
      */
     List<Team> searchByConfederation(Confederation confederation);
 
     /**
-     * Returns all quotes that contains given text.
+     * Returns all teams that contains given text.
      *
-     * @param group search string for quotes
-     * @return list of quotes
+     * @param group search string for teams
+     * @return list of teams
      */
     List<Team> searchByGroup(Group group);
 }
