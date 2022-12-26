@@ -41,11 +41,10 @@ import java.util.Stack;
                 confederation.setAbbreviation("UEFA");
                 confederation.setFullName("The Union of European Football Associations");
                 ArrayList<Team> teamsByConfederation = new ArrayList<Team>(dao.searchByConfederation(confederation));
-                System.out.println("Treba ispisati 2 konfedera po ovoj kategoriji: ");
-                //teamsByConfederation.forEach(q -> System.out.println(q.getTeamName()));
-
-
-                System.out.println("\n Jedan quote sa inside word \"gora\": ");
+                System.out.println("Treba ispisati 1 konfedera po ovoj kategoriji: ");
+                for(Team t : teamsByConfederation){
+                    System.out.println(t.getTeamName());
+                }
                 //ArrayList<Quote> quotes = new ArrayList<Quote>(dao.searchByText("gora"));
                 //for (Quote q : quotes) {
                   //  System.out.println(q.getQuote());
