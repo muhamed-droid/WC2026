@@ -150,7 +150,7 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     @Override
     public List<Team> searchByConfederation(Confederation confederation) {
-        String query = "SELECT * FROM teams WHERE confederation = ?";
+        String query = "SELECT * FROM teams WHERE confederation_id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, confederation.getId());
