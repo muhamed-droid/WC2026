@@ -1,9 +1,9 @@
 
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-Z
-*src/test/java/ba/unsa/etf/rpr/AppTest.java,9\b\9bdae70314931d22cd9741c6381ebe4f05ddbbe7
-Z
-*src/main/java/ba/unsa/etf/rpr/dao/Dao.java,a\1\a1348960998eebe088bc844c2afaaa6dd9d147f9
 _
 /src/main/java/ba/unsa/etf/rpr/domain/Table.java,9\0\9072058a6b5e1fe09f6ead1be8ec10c5649eff6f
+_
+/src/main/java/ba/unsa/etf/rpr/domain/Group.java,9\f\9fec83aab0be4d51d465437ab4a8e4a7b7c7312a
+^
+.src/main/java/ba/unsa/etf/rpr/domain/Team.java,c\4\c4809ba23ecc6c068e2853a238584b8bf35df36c
+g
+7src/main/java/ba/unsa/etf/rpr/dao/ConfederationDao.java,f\2\f2e08a0d98c8efc92ab03dfed77ea03fbba59045
