@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.domain;
 
+import java.util.Objects;
+
 public class Team {
     private int id;
     private String teamName, abbreviation;
@@ -47,5 +49,23 @@ public class Team {
         this.teamName = teamName;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Team team = (Team) o;
+        return Objects.equals(teamName, team.teamName);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, teamName, abbreviation, group, confederation);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder povratni = new StringBuilder();
+        povratni.append(this.getTeamName());
+        return String.valueOf(povratni);
+    }
 }
