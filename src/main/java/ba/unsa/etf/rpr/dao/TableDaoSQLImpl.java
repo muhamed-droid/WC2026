@@ -63,13 +63,13 @@ public class TableDaoSQLImpl implements TableDao {
     }
 
     /**
-     * @param id for searching category for tables
-     * @return specific Category for specific table from db
-     * @author ahajro2
+     * @param id for searching table for specific id
+     * @return specific table for id from db
+     * @author muhamed-droid
      */
 
     public Table returnTableForId(int id) {
-        String query = "SELECT * FROM categories WHERE id = ?";
+        String query = "SELECT * FROM tables WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -84,58 +84,4 @@ public class TableDaoSQLImpl implements TableDao {
         }
         return null;
     }
-
-    /**
-     * @param text search string for tables
-     * @return list of tables
-     * @author ahajro2
-     */
-
-    /*@Override
-    public List<Table> searchByText(String text) {
-        //mora sa concat jer inace nece raditi jer radi sa key chars
-        String query = "SELECT * FROM tables WHERE table LIKE concat('%', ?, '%')";
-        try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setString(1, text);
-            ResultSet rs = stmt.executeQuery();
-            ArrayList<Table> tableLista = new ArrayList<>();
-            while (rs.next()) {
-                Table t = new Table();
-                t.setId(rs.getInt(1));
-                tableLista.add(t);
-            }
-            return tableLista;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    } */
-
-
-    /**
-     * @param table search string for tables
-     * @return list of tables
-     * @author ahajro2
-     */
-
-    /*@Override
-    public List<Table> searchByTable(Table table) {
-        String query = "SELECT * FROM tables WHERE table = ?";
-        try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setInt(1, table.getId());
-            ResultSet rs = stmt.executeQuery();
-            ArrayList<Table> tableLista = new ArrayList<>();
-            while (rs.next()) {
-                Table t = new Table();
-                t.setId(rs.getInt(1));
-                tableLista.add(t);
-            }
-            return tableLista;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    } */
 }
