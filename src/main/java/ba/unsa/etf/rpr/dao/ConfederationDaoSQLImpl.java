@@ -93,9 +93,9 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
     }
 
     /**
-     * @param id for searching category for confederations
-     * @return specific Category for specific team from db
-     * @author ahajro2
+     * @param id for searching
+     * @return specific Confederation for specific id from db
+     * @author muhamed-droid
      */
 
     public Confederation returnConfederationForId(int id) {
@@ -116,61 +116,4 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
         }
         return null;
     }
-
-    /**
-     * @param abbreviation search string for confederations
-     * @return list of confederations
-     * @author ahajro2
-     */
-
-    /*@Override
-    public List<Confederation> searchByAbbreviation(String abbreviation) {
-        String query = "SELECT * FROM confederations";
-        try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setString(1, abbreviation);
-            ResultSet rs = stmt.executeQuery();
-            ArrayList<Confederation> confederationLista = new ArrayList<>();
-            while (rs.next()) {
-                Confederation q = new Confederation();
-                q.setId(rs.getInt(1));
-                q.setFullName(rs.getString(2));
-                q.setAbbreviation(rs.getString(3));
-                confederationLista.add(q);
-            }
-            return confederationLista;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    } */
-
-
-    /**
-     * @param confederation search string for confederations
-     * @return list of confederations
-     * @author ahajro2
-     */
-
-    /*@Override
-    public List<Confederation> searchByConfederation(Confederation confederation) {
-        String query = "SELECT * FROM confederations WHERE confederation = ?";
-        try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setInt(1, confederation.getId());
-            ResultSet rs = stmt.executeQuery();
-            ArrayList<Confederation> teamLista = new ArrayList<>();
-            while (rs.next()) {
-                Confederation q = new Confederation();
-                q.setId(rs.getInt(1));
-                q.setFullName(rs.getString(2));
-                q.setAbbreviation(rs.getString(3));
-                teamLista.add(q);
-            }
-            return teamLista;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    } */
 }
