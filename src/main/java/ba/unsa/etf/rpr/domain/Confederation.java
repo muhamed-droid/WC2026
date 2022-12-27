@@ -47,4 +47,5 @@ public class Confederation {
     public String toString() {
         return abbreviation;
     }
+
 }

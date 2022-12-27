@@ -161,7 +161,7 @@ public class TeamDaoSQLImpl implements TeamDao {
                 t.setId(rs.getInt(1));
                 t.setTeamName((rs.getString(2)));
                 t.setAbbreviation(rs.getString(3));
-                t.setGroup(returnGroupForId(rs.getInt(4)));
+                //t.setGroup(returnGroupForId(rs.getInt(4)));
                 t.setConfederation(confederation);
                 teamLista.add(t);
             }
@@ -174,7 +174,7 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     @Override
     public List<Team> searchByGroup(Group group) {
-        String query = "SELECT * FROM teams WHERE confederation = ?";
+        String query = "SELECT * FROM teams WHERE group_id = " + group.getId();
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, group.getId());
