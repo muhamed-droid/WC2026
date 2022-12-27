@@ -45,7 +45,9 @@ public class Confederation {
 
     @Override
     public String toString() {
-        return abbreviation;
+        StringBuilder povratni = new StringBuilder();
+        povratni.append(this.getAbbreviation());
+        return String.valueOf(povratni);
     }
 
 }
