@@ -1,11 +1,8 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.dao.GroupDao;
-import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.domain.Group;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class GroupDaoSQLImpl implements GroupDao {
@@ -65,9 +62,9 @@ public class GroupDaoSQLImpl implements GroupDao {
     }
 
     /**
-     * @param id for searching category for groups
-     * @return specific Category for specific group from db
-     * @author ahajro2
+     * @param id for searching
+     * @return specific Group for specific id from db
+     * @author muhamed-droid
      */
 
     public Group returnGroupForId(int id) {
@@ -87,57 +84,4 @@ public class GroupDaoSQLImpl implements GroupDao {
         return null;
     }
 
-    /**
-     * @param text search string for groups
-     * @return list of groups
-     * @author ahajro2
-     */
-
-    /*@Override
-    public List<Group> searchByText(String text) {
-        //mora sa concat jer inace nece raditi jer radi sa key chars
-        String query = "SELECT * FROM groups WHERE group LIKE concat('%', ?, '%')";
-        try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setString(1, text);
-            ResultSet rs = stmt.executeQuery();
-            ArrayList<Group> groupLista = new ArrayList<>();
-            while (rs.next()) {
-                Group g = new Group();
-                g.setId(rs.getInt(1));
-                groupLista.add(g);
-            }
-            return groupLista;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }*/
-
-
-    /**
-     * @param group search string for groups
-     * @return list of groups
-     * @author ahajro2
-     */
-
-    /*@Override
-    public List<Group> searchByGroup(Group group) {
-        String query = "SELECT * FROM groups WHERE group = ?";
-        try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setInt(1, group.getId());
-            ResultSet rs = stmt.executeQuery();
-            ArrayList<Group> groupLista = new ArrayList<>();
-            while (rs.next()) {
-                Group g = new Group();
-                g.setId(rs.getInt(1));
-                groupLista.add(g);
-            }
-            return groupLista;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    } */
 }
