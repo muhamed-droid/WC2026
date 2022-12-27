@@ -12,6 +12,7 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     private Connection connection;
 
+    //Connection happends in constructor
     public TeamDaoSQLImpl(){
         try {
             this.connection = DriverManager.getConnection("jdbc:mysql://sql.freedb.tech:3306/freedb_WC2026Base", "freedb_Muhamed-droid", "S#A2S3ceg*ReKGP");
@@ -69,13 +70,13 @@ public class TeamDaoSQLImpl implements TeamDao {
     }
 
     /**
-     * @param id for searching category for teams
-     * @return specific Category for specific team from db
-     * @author ahajro2
+     * @param id for searching confederation for teams
+     * @return specific Confederation for specific team from db
+     * @author muhamed-droid
      */
 
     public Confederation returnConfederationForId(int id){
-        String query = "SELECT * FROM categories WHERE id = ?";
+        String query = "SELECT * FROM teams WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -93,8 +94,14 @@ public class TeamDaoSQLImpl implements TeamDao {
         return null;
     }
 
+    /**
+     * @param id for searching group for teams
+     * @return specific Group for specific team from db
+     * @author muhamed-droid
+     */
+
     public Group returnGroupForId(int id) {
-        String query = "SELECT * FROM groups WHERE id = ?";
+        String query = "SELECT * FROM teams WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -111,41 +118,9 @@ public class TeamDaoSQLImpl implements TeamDao {
     }
 
     /**
-     * @param text search string for teams
+     * @param confederation search confederation for teams
      * @return list of teams
-     * @author ahajro2
-     */
-
-    @Override
-    public List<Team> searchByText(String text) {
-        //mora sa concat jer inace nece raditi jer radi sa key chars
-        String query = "SELECT * FROM teams WHERE team LIKE concat('%', ?, '%')";
-        try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
-            stmt.setString(1, text);
-            ResultSet rs = stmt.executeQuery();
-            ArrayList<Team> teamLista = new ArrayList<>();
-            while (rs.next()) {
-                Team t = new Team();
-                t.setId(rs.getInt(1));
-                t.setTeamName(rs.getString(2));
-                t.setAbbreviation(rs.getString(3));
-                t.setGroup(returnGroupForId(rs.getInt(4)));
-                t.setConfederation(returnConfederationForId(rs.getInt(5)));
-                teamLista.add(t);
-            }
-            return teamLista;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
-    /**
-     * @param confederation search string for teams
-     * @return list of teams
-     * @author ahajro2
+     * @author muhamed-droid
      */
 
     @Override
@@ -171,6 +146,12 @@ public class TeamDaoSQLImpl implements TeamDao {
         }
         return null;
     }
+
+    /**
+     * @param group search group for teams
+     * @return list of teams
+     * @author muhamed-droid
+     */
 
     @Override
     public List<Team> searchByGroup(Group group) {
