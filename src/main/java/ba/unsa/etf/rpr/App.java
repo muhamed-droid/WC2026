@@ -18,6 +18,8 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
+
 /**
  * Writing all teams by confederations
  */
@@ -25,12 +27,12 @@ import java.util.ArrayList;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        StackPane pane = new StackPane();
-        pane.getChildren().add(new Button("OK"));
-        Scene scene = new Scene(pane, 200, 50);
-        primaryStage.setTitle("Button in a pane"); // Set the stage title
-        primaryStage.setScene(scene); // Place the scene in the stage
-        primaryStage.show(); // Display the stage
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/proba.fxml"));
+            Parent root = fxmlLoader.load();
+            primaryStage.setTitle("Quote Maker v1.0");
+            primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            primaryStage.setResizable(false);
+            primaryStage.show();
     }
 
 
