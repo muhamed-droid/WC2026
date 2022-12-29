@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
-public class Table {
+public class Table implements Idable{
     private int id;
 
     public int getId() {

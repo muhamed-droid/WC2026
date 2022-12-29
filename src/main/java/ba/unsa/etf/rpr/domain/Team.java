@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
-public class Team {
+public class Team implements Idable{
     private int id;
     private String teamName, abbreviation;
     Group group;

@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
-public class Confederation {
+public class Confederation implements Idable{
     int id;
     String fullName, abbreviation;
 
