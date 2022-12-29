@@ -3,6 +3,7 @@ package ba.unsa.etf.rpr.dao;
 import ba.unsa.etf.rpr.domain.Group;
 
 import java.sql.*;
+import java.util.Collections;
 import java.util.List;
 
 public class GroupDaoSQLImpl implements GroupDao {
@@ -53,12 +54,12 @@ public class GroupDaoSQLImpl implements GroupDao {
 
     @Override
     public void delete(int id) {
-
+        //I will add something here
     }
 
     @Override
     public List<Group> getAll() {
-        return null;
+        return Collections.emptyList();
     }
 
     /**

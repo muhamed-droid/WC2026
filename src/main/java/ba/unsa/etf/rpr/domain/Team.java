@@ -4,9 +4,10 @@ import java.util.Objects;
 
 public class Team implements Idable{
     private int id;
-    private String teamName, abbreviation;
-    Group group;
-    Confederation confederation;
+    private String teamName;
+    private String abbreviation;
+    private Group group;
+    private Confederation confederation;
 
     public int getId() {
         return id;

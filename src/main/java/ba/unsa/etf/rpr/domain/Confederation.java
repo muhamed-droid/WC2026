@@ -3,8 +3,9 @@ package ba.unsa.etf.rpr.domain;
 import java.util.Objects;
 
 public class Confederation implements Idable{
-    int id;
-    String fullName, abbreviation;
+    private int id;
+    private String fullName;
+    private String abbreviation;
 
     public String getAbbreviation() {
         return abbreviation;
@@ -51,3 +52,4 @@ public class Confederation implements Idable{
     }
 
 }
+

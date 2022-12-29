@@ -1,10 +1,9 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.dao.TableDao;
 import ba.unsa.etf.rpr.domain.Table;
 
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TableDaoSQLImpl implements TableDao {
@@ -54,12 +53,12 @@ public class TableDaoSQLImpl implements TableDao {
 
     @Override
     public void delete(int id) {
-
+        //I will add something here
     }
 
     @Override
     public List<Table> getAll() {
-        return null;
+        return Collections.emptyList();
     }
 
     /**

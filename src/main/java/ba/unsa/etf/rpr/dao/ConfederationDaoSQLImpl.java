@@ -1,12 +1,10 @@
 package ba.unsa.etf.rpr.dao;
 
 
-
-import ba.unsa.etf.rpr.dao.ConfederationDao;
 import ba.unsa.etf.rpr.domain.Confederation;
 
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ConfederationDaoSQLImpl implements ConfederationDao {
@@ -47,11 +45,10 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
 
     @Override
     public Confederation add(Confederation item) {
-        String insert = "INSERT INTO confederations(abbreviation, fullName) VALUES(?)";
+        String insert = "INSERT INTO confederations VALUES(?)";
         try{
             PreparedStatement stmt = this.connection.prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, item.getFullName());
-            stmt.setString(2, item.getAbbreviation());
             stmt.executeUpdate();
 
             ResultSet rs = stmt.getGeneratedKeys();
@@ -72,7 +69,6 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
             PreparedStatement stmt = this.connection.prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
             stmt.setObject(1, item.getFullName());
             stmt.setObject(2, item.getAbbreviation());
-            stmt.setObject(3, item.getId());
             stmt.executeUpdate();
             return item;
         }catch (SQLException e){
@@ -84,12 +80,13 @@ public class ConfederationDaoSQLImpl implements ConfederationDao {
 
     @Override
     public void delete(int id) {
-
+        //Something will be implemented here
     }
 
     @Override
     public List<Confederation> getAll() {
-        return null;
+        //Something will be implemented here
+        return Collections.emptyList();
     }
 
     /**

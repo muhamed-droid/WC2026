@@ -6,15 +6,18 @@ import ba.unsa.etf.rpr.domain.Team;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TeamDaoSQLImpl implements TeamDao {
 
     private Connection connection;
+    private String query;
 
     //Connection happends in constructor
     public TeamDaoSQLImpl(){
         try {
+            query = "SELECT * FROM teams WHERE id = ?";
             this.connection = DriverManager.getConnection("jdbc:mysql://sql.freedb.tech:3306/freedb_WC2026Base", "freedb_Muhamed-droid", "S#A2S3ceg*ReKGP");
         } catch (Exception e) {
             e.printStackTrace();
@@ -23,7 +26,6 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     @Override
     public Team getById(int id) {
-        String query = "SELECT * FROM teams WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -61,12 +63,12 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     @Override
     public void delete(int id) {
-
+        //I will do something here
     }
 
     @Override
     public List<Team> getAll() {
-        return null;
+        return Collections.emptyList();
     }
 
     /**
@@ -76,7 +78,6 @@ public class TeamDaoSQLImpl implements TeamDao {
      */
 
     public Confederation returnConfederationForId(int id){
-        String query = "SELECT * FROM teams WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -101,7 +102,6 @@ public class TeamDaoSQLImpl implements TeamDao {
      */
 
     public Group returnGroupForId(int id) {
-        String query = "SELECT * FROM teams WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -125,9 +125,9 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     @Override
     public List<Team> searchByConfederation(Confederation confederation) {
-        String query = "SELECT * FROM teams WHERE confederation_id = ?";
+        String q = "SELECT * FROM teams WHERE confederation_id = ?";
         try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
+            PreparedStatement stmt = this.connection.prepareStatement(q);
             stmt.setInt(1, confederation.getId());
             ResultSet rs = stmt.executeQuery();
             ArrayList<Team> teamLista = new ArrayList<>();
@@ -136,7 +136,6 @@ public class TeamDaoSQLImpl implements TeamDao {
                 t.setId(rs.getInt(1));
                 t.setTeamName((rs.getString(2)));
                 t.setAbbreviation(rs.getString(3));
-                //t.setGroup(returnGroupForId(rs.getInt(4)));
                 t.setConfederation(confederation);
                 teamLista.add(t);
             }
@@ -144,7 +143,7 @@ public class TeamDaoSQLImpl implements TeamDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return Collections.emptyList();
     }
 
     /**
@@ -155,9 +154,9 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     @Override
     public List<Team> searchByGroup(Group group) {
-        String query = "SELECT * FROM teams WHERE group_id = " + group.getId();
+        String q = "SELECT * FROM teams WHERE group_id = ?";
         try {
-            PreparedStatement stmt = this.connection.prepareStatement(query);
+            PreparedStatement stmt = this.connection.prepareStatement(q);
             stmt.setInt(1, group.getId());
             ResultSet rs = stmt.executeQuery();
             ArrayList<Team> teamLista = new ArrayList<>();
@@ -174,6 +173,6 @@ public class TeamDaoSQLImpl implements TeamDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return Collections.emptyList();
     }
 }
