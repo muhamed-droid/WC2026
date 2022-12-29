@@ -14,7 +14,7 @@ public class TeamDaoSQLImpl implements TeamDao {
     private Connection connection;
     private String query;
 
-    //Connection happends in constructor
+    //We make connections in constructor
     public TeamDaoSQLImpl(){
         try {
             query = "SELECT * FROM teams WHERE id = ?";
