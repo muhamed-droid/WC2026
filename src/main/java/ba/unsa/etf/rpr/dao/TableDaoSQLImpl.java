@@ -1,13 +1,17 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.domain.Table;
+import ba.unsa.etf.rpr.exceptions.MyException;
 
 import java.sql.*;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-public class TableDaoSQLImpl implements TableDao {
-    private Connection connection;
+public class TableDaoSQLImpl extends AbstractDao<Table> implements TableDao {
+    /*private Connection connection;
 
     public TableDaoSQLImpl(){
         try {
@@ -59,7 +63,7 @@ public class TableDaoSQLImpl implements TableDao {
     @Override
     public List<Table> getAll() {
         return Collections.emptyList();
-    }
+    } */
 
     /**
      * @param id for searching table for specific id
@@ -67,7 +71,7 @@ public class TableDaoSQLImpl implements TableDao {
      * @author muhamed-droid
      */
 
-    public Table returnTableForId(int id) {
+    /*public Table returnTableForId(int id) {
         String query = "SELECT * FROM tables WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
@@ -82,5 +86,42 @@ public class TableDaoSQLImpl implements TableDao {
             e.printStackTrace();
         }
         return null;
+    } */
+
+    private static  TableDaoSQLImpl instance = null;
+    public TableDaoSQLImpl() {
+        super("confederations");
     }
+
+    public static TableDaoSQLImpl getInstance(){
+        if(instance==null)
+            instance = new TableDaoSQLImpl();
+        return instance;
+    }
+
+    public static void removeInstance(){
+        if(instance!=null)
+            instance=null;
+    }
+
+    @Override
+    public Table row2object(ResultSet rs) throws MyException {
+        try {
+            Table table = new Table();
+            table.setId(rs.getInt("id"));
+            return table;
+        } catch (SQLException e) {
+            throw new MyException(e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public Map<String, Object> object2row(Table object) {
+        Map<String, Object> row = new TreeMap<>();
+        row.put("id", object.getId());
+        return row;
+    }
+
+
+
 }
