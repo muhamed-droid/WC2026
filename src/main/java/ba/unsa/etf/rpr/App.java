@@ -23,22 +23,13 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 /**
  * Writing all teams by confederations
  */
-        public class App extends Application {
+        public class App {
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/proba.fxml"));
-            Parent root = fxmlLoader.load();
-            primaryStage.setTitle("Quote Maker v1.0");
-            primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-            primaryStage.setResizable(false);
-            primaryStage.show();
-    }
+
 
 
     public static void main(String[] args) {
-        launch();
-               /* //initialization of dao objects
+                //initialization of dao objects
                 TeamDao dao = new TeamDaoSQLImpl();
                 ConfederationDaoSQLImpl dao1 = new ConfederationDaoSQLImpl();
 
@@ -59,7 +50,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
                         System.out.println(i + ". " + t);
                         i++;
                     }
-                }*/
+                }
     }
 
     /*public void otvoriNovi(ActionEvent actionEvent) throws Exception {
