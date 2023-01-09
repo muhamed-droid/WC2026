@@ -3,15 +3,14 @@ package ba.unsa.etf.rpr.dao;
 import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.domain.Team;
+import ba.unsa.etf.rpr.exceptions.MyException;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-public class TeamDaoSQLImpl implements TeamDao {
+public class TeamDaoSQLImpl extends AbstractDao<Team> implements TeamDao {
 
-    private Connection connection;
+    /*private Connection connection;
     private String query;
 
     //We make connections in constructor
@@ -69,7 +68,7 @@ public class TeamDaoSQLImpl implements TeamDao {
     @Override
     public List<Team> getAll() {
         return Collections.emptyList();
-    }
+    } */
 
     /**
      * @param id for searching confederation for teams
@@ -77,7 +76,7 @@ public class TeamDaoSQLImpl implements TeamDao {
      * @author muhamed-droid
      */
 
-    public Confederation returnConfederationForId(int id){
+    /*public Confederation returnConfederationForId(int id){
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -93,7 +92,7 @@ public class TeamDaoSQLImpl implements TeamDao {
             e.printStackTrace();
         }
         return null;
-    }
+    } */
 
     /**
      * @param id for searching group for teams
@@ -101,7 +100,7 @@ public class TeamDaoSQLImpl implements TeamDao {
      * @author muhamed-droid
      */
 
-    public Group returnGroupForId(int id) {
+    /*public Group returnGroupForId(int id) {
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
             stmt.setInt(1, id);
@@ -115,7 +114,7 @@ public class TeamDaoSQLImpl implements TeamDao {
             e.printStackTrace();
         }
         return null;
-    }
+    } */
 
     /**
      * @param confederation search confederation for teams
@@ -125,8 +124,11 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     @Override
     public List<Team> searchByConfederation(Confederation confederation) {
-        String q = "SELECT * FROM teams WHERE confederation_id = ?";
-        try {
+        //String q = "SELECT * FROM teams WHERE confederation_id = ?";
+
+        return executeQuery("SELECT * FROM teams WHERE confederation_id = ?", new Object[]{confederation.getId()});
+
+        /*try {
             PreparedStatement stmt = this.connection.prepareStatement(q);
             stmt.setInt(1, confederation.getId());
             ResultSet rs = stmt.executeQuery();
@@ -143,7 +145,7 @@ public class TeamDaoSQLImpl implements TeamDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return Collections.emptyList();
+        return Collections.emptyList(); */
     }
 
     /**
@@ -154,7 +156,10 @@ public class TeamDaoSQLImpl implements TeamDao {
 
     @Override
     public List<Team> searchByGroup(Group group) {
-        String q = "SELECT * FROM teams WHERE group_id = ?";
+
+        return executeQuery("SELECT * FROM teams WHERE group_id = ?", new Object[]{group});
+
+        /*String q = "SELECT * FROM teams WHERE group_id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(q);
             stmt.setInt(1, group.getId());
@@ -173,6 +178,46 @@ public class TeamDaoSQLImpl implements TeamDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return Collections.emptyList();
+        return Collections.emptyList(); */
     }
+
+    private static  TeamDaoSQLImpl instance = null;
+    public TeamDaoSQLImpl() {
+        super("teams");
+    }
+
+    public static TeamDaoSQLImpl getInstance(){
+        if(instance==null)
+            instance = new TeamDaoSQLImpl();
+        return instance;
+    }
+
+    public static void removeInstance(){
+        if(instance!=null)
+            instance=null;
+    }
+
+    @Override
+    public Team row2object(ResultSet rs) throws MyException {
+        try {
+            Team team = new Team();
+            team.setId(rs.getInt("id"));
+            team.setTeamName(rs.getString("team_name"));
+            team.setAbbreviation(rs.getString("abbreviation"));
+            //team.setConfederation(rs.getString());
+            return team;
+        } catch (SQLException e) {
+            throw new MyException(e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public Map<String, Object> object2row(Team object) {
+        Map<String, Object> row = new TreeMap<>();
+        row.put("id", object.getId());
+        row.put("team_name", object.getTeamName());
+        row.put("abbreviation", object.getAbbreviation());
+        return row;
+    }
+
 }
