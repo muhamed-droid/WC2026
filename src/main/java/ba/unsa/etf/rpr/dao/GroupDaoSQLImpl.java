@@ -91,7 +91,7 @@ public class GroupDaoSQLImpl extends AbstractDao<Group> implements GroupDao {
 
     private static  GroupDaoSQLImpl instance = null;
     public GroupDaoSQLImpl() {
-        super("confederations");
+        super("groups");
     }
 
     public static GroupDaoSQLImpl getInstance(){
