@@ -90,7 +90,7 @@ public class TableDaoSQLImpl extends AbstractDao<Table> implements TableDao {
 
     private static  TableDaoSQLImpl instance = null;
     public TableDaoSQLImpl() {
-        super("confederations");
+        super("tables");
     }
 
     public static TableDaoSQLImpl getInstance(){
