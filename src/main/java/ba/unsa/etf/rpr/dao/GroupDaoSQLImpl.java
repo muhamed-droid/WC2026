@@ -1,14 +1,18 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.domain.Group;
+import ba.unsa.etf.rpr.exceptions.MyException;
 
 import java.sql.*;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-public class GroupDaoSQLImpl implements GroupDao {
+public class GroupDaoSQLImpl extends AbstractDao<Group> implements GroupDao {
 
-    private Connection connection;
+    /* private Connection connection;
 
     public GroupDaoSQLImpl(){
         try {
@@ -61,14 +65,14 @@ public class GroupDaoSQLImpl implements GroupDao {
     public List<Group> getAll() {
         return Collections.emptyList();
     }
-
+*/
     /**
      * @param id for searching
      * @return specific Group for specific id from db
      * @author muhamed-droid
      */
 
-    public Group returnGroupForId(int id) {
+   /* public Group returnGroupForId(int id) {
         String query = "SELECT * FROM groups WHERE id = ?";
         try {
             PreparedStatement stmt = this.connection.prepareStatement(query);
@@ -83,6 +87,40 @@ public class GroupDaoSQLImpl implements GroupDao {
             e.printStackTrace();
         }
         return null;
+    } */
+
+    private static  GroupDaoSQLImpl instance = null;
+    public GroupDaoSQLImpl() {
+        super("confederations");
+    }
+
+    public static GroupDaoSQLImpl getInstance(){
+        if(instance==null)
+            instance = new GroupDaoSQLImpl();
+        return instance;
+    }
+
+    public static void removeInstance(){
+        if(instance!=null)
+            instance=null;
+    }
+
+    @Override
+    public Group row2object(ResultSet rs) throws MyException {
+        try {
+            Group group = new Group();
+            group.setId(rs.getInt("id"));
+            return group;
+        } catch (SQLException e) {
+            throw new MyException(e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public Map<String, Object> object2row(Group object) {
+        Map<String, Object> row = new TreeMap<>();
+        row.put("id", object.getId());
+        return row;
     }
 
 }
