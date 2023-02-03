@@ -19,3 +19,9 @@ g
 7src/main/java/ba/unsa/etf/rpr/domain/Confederation.java,4\f\4f9a2b1a771dcbd486e13a7e3e3c2504c2a78775
 ^
 .src/main/java/ba/unsa/etf/rpr/domain/Team.java,c\4\c4809ba23ecc6c068e2853a238584b8bf35df36c
+_
+/src/main/java/ba/unsa/etf/rpr/dao/TableDao.java,7\2\729d06e449ace01061370a31d03bf94894fe3eba
+i
+9src/main/java/ba/unsa/etf/rpr/exceptions/MyException.java,7\4\74f789daa1a7cea693a6e47a8ca93c06efd36317
+g
+7src/main/java/ba/unsa/etf/rpr/dao/ConfederationDao.java,f\2\f2e08a0d98c8efc92ab03dfed77ea03fbba59045
