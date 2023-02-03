@@ -13,8 +13,6 @@ g
 7src/main/java/ba/unsa/etf/rpr/Business/TeamManager.java,5\3\532694ec435bda76e46d5519b6585b2b53eb4efb
 m
 =src/main/java/ba/unsa/etf/rpr/Controllers/HomeController.java,b\1\b1304442bc69fd97f3b837af80482e2bc05cd232
-p
-@src/main/java/ba/unsa/etf/rpr/Business/ConfederationManager.java,c\f\cf22892f6d02f1deb2bbbaf4a1253ff232f502a0
 g
 7src/main/java/ba/unsa/etf/rpr/domain/Confederation.java,4\f\4f9a2b1a771dcbd486e13a7e3e3c2504c2a78775
 ^
