@@ -32,4 +32,5 @@ public interface TeamDao extends Dao<Team> {
     List<Team> searchByGroup(Group group);
 
     List<Team> searchByName(String name);
+
 }

@@ -9,8 +9,6 @@ _
 /src/main/java/ba/unsa/etf/rpr/domain/Table.java,9\0\9072058a6b5e1fe09f6ead1be8ec10c5649eff6f
 `
 0src/main/java/ba/unsa/etf/rpr/domain/Idable.java,1\0\1089e0b50000999ff509ccb1c536ba9caa5d3183
-g
-7src/main/java/ba/unsa/etf/rpr/Business/TeamManager.java,5\3\532694ec435bda76e46d5519b6585b2b53eb4efb
 m
 =src/main/java/ba/unsa/etf/rpr/Controllers/HomeController.java,b\1\b1304442bc69fd97f3b837af80482e2bc05cd232
 g
