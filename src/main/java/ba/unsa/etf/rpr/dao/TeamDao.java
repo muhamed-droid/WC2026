@@ -30,4 +30,6 @@ public interface TeamDao extends Dao<Team> {
      * @return list of teams
      */
     List<Team> searchByGroup(Group group);
+
+    List<Team> searchByName(String name);
 }
