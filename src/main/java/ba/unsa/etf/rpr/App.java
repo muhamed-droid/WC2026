@@ -55,7 +55,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
     /*public void otvoriNovi(ActionEvent actionEvent) throws Exception {
         Stage myStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/proba.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/HomeScreen.fxml"));
         myStage.setTitle("Novi prozor");
         myStage.setScene(new Scene(root, 300, 275));
         myStage.show();
