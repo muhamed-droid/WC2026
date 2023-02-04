@@ -181,6 +181,12 @@ public class TeamDaoSQLImpl extends AbstractDao<Team> implements TeamDao {
         return Collections.emptyList(); */
     }
 
+    @Override
+    public List<Team> searchByName(String name) {
+        //Treba implementirati searchByName
+        return null;
+    }
+
     private static  TeamDaoSQLImpl instance = null;
     public TeamDaoSQLImpl() {
         super("teams");
