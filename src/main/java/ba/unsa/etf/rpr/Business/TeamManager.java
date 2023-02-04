@@ -6,6 +6,13 @@ import ba.unsa.etf.rpr.exceptions.MyException;
 
 import java.util.List;
 
+/**
+ * Business Logic Layer for Teams
+ *
+ * @author Muhamed-droid
+ */
+
+
 public class TeamManager {
     public List<Team> getAll() throws MyException {
         return DaoFactory.teamDao().getAll();
