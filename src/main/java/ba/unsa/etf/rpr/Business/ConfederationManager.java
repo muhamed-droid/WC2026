@@ -6,6 +6,12 @@ import ba.unsa.etf.rpr.exceptions.MyException;
 
 import java.util.List;
 
+/**
+ * Business Logic Layer for management of Confederations
+ *
+ * @author Muhamed-droid
+ */
+
 public class ConfederationManager {
     public void validateCategoryName(String name) throws MyException {
         //Trebalo bi da ako dodajemo novu da ona prije ne postoji to jest da bude nova skroz
