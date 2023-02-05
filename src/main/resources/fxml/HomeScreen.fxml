@@ -12,11 +12,9 @@
 <?import java.net.URL?>
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <stylesheets>
-
-      <URL value = "@../css/homeScreen.css" />
-
+      <URL value = "@../css/homeScreen.css"/>
       <!--
-      <URL value = "@../css/homeScreen.css/>
+      <URL value = "@../css/homeScreen.css"/>
       -->
   </stylesheets>
     <columnConstraints>
@@ -38,7 +36,7 @@
          </font></Label>
       <ImageView fx:id="photo" fitHeight="214.0" fitWidth="602.0" nodeOrientation="INHERIT" pickOnBounds="true" GridPane.rowIndex="1">
          <image>
-            <Image url="@../images/16668136918688.jpg" />
+            <Image url="@../images/homeScreenImage.jpg" />
          </image>
       </ImageView>
    </children>
