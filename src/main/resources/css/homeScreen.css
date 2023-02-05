@@ -1,3 +1,6 @@
 #headline {
-    background-color: yellow;
+    -fx-background-color: white;
+}
+#startButton {
+    -fx-background-color: white;
 }
