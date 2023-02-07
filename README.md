@@ -1,5 +1,6 @@
 # WC2026
 Project is worked for subject Developement of programming solutions. It is worked in java programming language, using IntelliJ Idea Community Edition. 
+CSS is used to style UI elements. 
 Its purpose is to totalize all the lessons on the course. It is maven project, and it is possible to run project through a command line. 
 Project requirments are listed below: 
 1. Github repository with a minimum of 200 commits (1 point)
