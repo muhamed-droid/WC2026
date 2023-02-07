@@ -14,23 +14,13 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class HomeScreenController {
 
-    //@FXML
-    //private javafx.scene.control.Button buttonClick;
-
     @FXML private javafx.scene.control.Button startButton;
 
     @FXML
     public void buttonClick(ActionEvent actionEvent) throws IOException {
 
-        //Stage previusStage = (Stage) buttonClick.getScene().getWindow();
-        //previusStage.close();
-
-
-
-            // get a handle to the stage
-            Stage previusStage = (Stage) startButton.getScene().getWindow();
-            // do what you have to do
-            previusStage.close();
+        Stage previusStage = (Stage) startButton.getScene().getWindow();
+        previusStage.close();
 
 
         Stage stage = new Stage();
@@ -40,8 +30,6 @@ public class HomeScreenController {
         stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         stage.setResizable(false);
         stage.getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
-        //Image icon = new Image(getClass().getResourceAsStream("homeScreenIcon.png"));
-        //primaryStage.getIcons().add(icon);
         stage.show();
 
     }
