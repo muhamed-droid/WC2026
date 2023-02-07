@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.Controllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,8 +14,14 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class HomeScreenController {
 
+    //@FXML
+    //private javafx.scene.control.Button buttonClick;
 
+    //@FXML
     public void buttonClick(ActionEvent actionEvent) throws IOException {
+
+        //Stage previusStage = (Stage) buttonClick.getScene().getWindow();
+        //previusStage.close();
 
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/TeamsSelectingPage.fxml"));
@@ -26,5 +33,6 @@ public class HomeScreenController {
         //Image icon = new Image(getClass().getResourceAsStream("homeScreenIcon.png"));
         //primaryStage.getIcons().add(icon);
         stage.show();
+
     }
 }
