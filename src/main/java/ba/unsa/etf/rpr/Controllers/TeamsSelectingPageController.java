@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.Business.TeamManager;
 import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 
@@ -34,4 +35,7 @@ public class TeamsSelectingPageController {
         choiceBox2.setValue(FXCollections.observableList(teamManager.searchTeamsInConfederation(choiceBox1.getValue())).get(0));
     }
 
+    public void onAddButtonClick(ActionEvent actionEvent) {
+
+    }
 }
