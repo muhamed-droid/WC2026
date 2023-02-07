@@ -28,7 +28,7 @@ public class TeamsSelectingPageController {
         ConfederationManager confederationManager = new ConfederationManager();
         TeamManager teamManager = new TeamManager();
 
-        choiceBox1.valueProperty().bind(choiceBox2.valueProperty().getValue().getConfederation());
+
 
         choiceBox1.setValue(FXCollections.observableList(confederationManager.getAll()).get(0));
         choiceBox1.setItems(FXCollections.observableList(confederationManager.getAll()));
