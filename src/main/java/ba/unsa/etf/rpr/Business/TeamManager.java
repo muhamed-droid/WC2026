@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.Business;
 
 import ba.unsa.etf.rpr.dao.DaoFactory;
+import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.domain.Team;
 import ba.unsa.etf.rpr.exceptions.MyException;
 
@@ -20,6 +21,10 @@ public class TeamManager {
 
     public List<Team> searchteams(String name) throws MyException {
         return DaoFactory.teamDao().searchByName(name);
+    }
+
+    public List<Team> searchTeamsInConfederation(Confederation con) throws MyException {
+        return DaoFactory.teamDao().searchByConfederation(con);
     }
 
     public void delete(int id) throws MyException{
