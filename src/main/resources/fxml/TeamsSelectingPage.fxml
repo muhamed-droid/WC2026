@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
@@ -18,12 +20,22 @@
    <children>
       <TabPane prefHeight="360.0" prefWidth="427.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="10000.0" tabMaxWidth="10000.0">
         <tabs>
-          <Tab text="MainTab" />
+          <Tab text="Pick your teams">
+               <content>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextArea prefHeight="53.0" prefWidth="318.0" text="Dear user, choose 48 teams to participate in &#10;World cup 2026!" />
+                        <ChoiceBox prefHeight="25.0" prefWidth="155.0" />
+                        <ChoiceBox prefHeight="25.0" prefWidth="162.0" />
+                     </children>
+                  </FlowPane>
+               </content>
+            </Tab>
           <Tab text="Regulations">
                <content>
                   <Pane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TextArea prefHeight="334.0" prefWidth="317.0" text="Welcome to World Cup 2026 simulation. &#10;Dear user, here are some regulations you need to look&#10;at when choosing teams. &#10;1. You have to choose exactly 48 teams. (If you &#10;choose less, other teams will be selected randomly.)&#10;2. Canada, Mexico, USA have to be selected as they are &#10;host nations. &#10;3. Every confederation have exact number&#10; of teams that can perform. Number of places at the &#10;world cup have to be obligated. Number of places &#10;from each confederation is listed below: &#10;AFC 8, CAF 9, CONCACAF 7,&#10;CONMEBOL 7, OFC 1, UEFA 16. &#10; &#10;&#10;" />
+                        <TextArea prefHeight="334.0" prefWidth="317.0" text="Welcome to World Cup 2026 simulation. &#10;Dear user, here are some regulations you need to look&#10;at when choosing teams. &#10;1. You have to choose exactly 48 teams. (If you &#10;choose less, other teams will be selected randomly.)&#10;2. Canada, Mexico, USA have to be selected as they are &#10;host nations. &#10;3. Every confederation have exact number&#10; of teams that can perform. Number of places at the &#10;world cup have to be obligated. Number of places &#10;from each confederation is listed below: &#10;AFC 8 places, CAF 10 places, CONCACAF 7,&#10;CONMEBOL 7, &#10; &#10;&#10;" />
                      </children>
                   </Pane>
                </content>
