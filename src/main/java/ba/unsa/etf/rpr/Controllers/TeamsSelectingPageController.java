@@ -2,11 +2,8 @@ package ba.unsa.etf.rpr.Controllers;
 
 import ba.unsa.etf.rpr.Business.ConfederationManager;
 import ba.unsa.etf.rpr.Business.TeamManager;
-import ba.unsa.etf.rpr.dao.TeamDao;
-import ba.unsa.etf.rpr.dao.TeamDaoSQLImpl;
 import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.domain.Team;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
