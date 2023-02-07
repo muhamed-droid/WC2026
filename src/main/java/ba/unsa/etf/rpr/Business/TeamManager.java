@@ -31,8 +31,8 @@ public class TeamManager {
         DaoFactory.teamDao().delete(id);
     }
 
-    public Team getById(int quoteId) throws MyException{
-        return DaoFactory.teamDao().getById(quoteId);
+    public Team getById(int teamId) throws MyException{
+        return DaoFactory.teamDao().getById(teamId);
     }
 
     public void update(Team t) throws MyException{
