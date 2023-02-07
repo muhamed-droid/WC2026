@@ -17,6 +17,7 @@ public class AppFX extends Application {
         primaryStage.setTitle("WC2026");
         primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         primaryStage.setResizable(false);
+        primaryStage.getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
         //Image icon = new Image(getClass().getResourceAsStream("homeScreenIcon.png"));
         //primaryStage.getIcons().add(icon);
         primaryStage.show();
