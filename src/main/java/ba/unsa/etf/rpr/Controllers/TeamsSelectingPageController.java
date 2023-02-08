@@ -298,7 +298,7 @@ public class TeamsSelectingPageController {
 
     public void onClickFinishButton(ActionEvent actionEvent) throws IOException {
 
-        for (int i = 0; i < 48; i++) {
+        for (int i = 0; i < listView.getItems().size(); i++) {
             Finalist finalist = new Finalist();
             finalist.setId(i+1);
             finalist.setTeam(listView.getItems().get(i));
