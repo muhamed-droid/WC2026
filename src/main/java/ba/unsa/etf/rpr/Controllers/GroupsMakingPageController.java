@@ -13,6 +13,8 @@ public class GroupsMakingPageController {
     @FXML
     private ChoiceBox<Team> choiceBox1 = new ChoiceBox<>();
 
+    private ChoiceBox<String> choiceBox2 = new ChoiceBox<>();
+
     @FXML
     private Pagination pagination = new Pagination();
 
@@ -326,10 +328,15 @@ public class GroupsMakingPageController {
         choiceBox1.getItems().add(france);
         choiceBox1.getItems().add(turkey);
 
+        choiceBox2.getItems().add("1");
+        choiceBox2.getItems().add("2");
+        choiceBox2.getItems().add("3");
 
-        for (int i = 0; i < DaoFactory.finalistDao().getAll().size(); i++){
-            choiceBox1.getItems().add(DaoFactory.finalistDao().getAll().get(i).getTeam());
-        }
+
+
+        //for (int i = 0; i < DaoFactory.finalistDao().getAll().size(); i++){
+          //  choiceBox1.getItems().add(DaoFactory.finalistDao().getAll().get(i).getTeam());
+        //}
     }
 
 
