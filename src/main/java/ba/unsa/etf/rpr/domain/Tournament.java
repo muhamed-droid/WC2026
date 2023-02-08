@@ -14,4 +14,12 @@ public class Tournament {
     }
 
     private  ArrayList<Team> teams;
+
+    public void addTeam(Team t){
+        teams.add(t);
+    }
+
+    public ArrayList<Team> getAll() {
+        return teams;
+    }
 }
