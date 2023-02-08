@@ -1,7 +1,6 @@
 package ba.unsa.etf.rpr.Controllers;
 
 import ba.unsa.etf.rpr.Business.ConfederationManager;
-import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
