@@ -8,21 +8,10 @@ package ba.unsa.etf.rpr.exceptions;
  */
 
 public class MyException extends RuntimeException{
-    /**
-     *
-     * @return instance of TeamDaoSQLImpl
-     * @author muhamed-droid
-     */
     public MyException(String msg, Exception reason){
         super(msg, reason);
     }
 
-
-    /**
-     *
-     * @return instance of TeamDaoSQLImpl
-     * @author muhamed-droid
-     */
     public MyException(String msg){
         super(msg);
     }
