@@ -396,7 +396,7 @@ public class GroupsMakingPageController {
             label1.setFont(new Font("Arial", 24));
 
             Group g = new Group();
-            g.setId(pageIndex);
+            g.setId(pageIndex+1);
 
             Label label2 = new Label("");
             for(Team t : choiceBox1.getItems())
