@@ -102,6 +102,87 @@ public class GroupsMakingPageController {
         uae.setAbbreviation("UAE");
         uae.setTeamName("United Arab Emirates");
 
+        Team angola = new Team();
+        angola.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        angola.setAbbreviation("ANG");
+        angola.setTeamName("Angola");
+
+        Team ghana = new Team();
+        ghana.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        ghana.setAbbreviation("GHA");
+        ghana.setTeamName("Ghana");
+
+        Team cameroon = new Team();
+        cameroon.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        cameroon.setAbbreviation("CAM");
+        cameroon.setTeamName("Cameroon");
+
+        Team algeria = new Team();
+        algeria.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        algeria.setAbbreviation("ALG");
+        algeria.setTeamName("Algeria");
+
+        Team tunisia = new Team();
+        tunisia.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        tunisia.setAbbreviation("TUN");
+        tunisia.setTeamName("Tunisia");
+
+        Team morocco = new Team();
+        morocco.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        morocco.setAbbreviation("MAR");
+        morocco.setTeamName("Morocco");
+
+        Team ivoryCoast = new Team();
+        ivoryCoast.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        ivoryCoast.setAbbreviation("CIV");
+        ivoryCoast.setTeamName("Ivory Coast");
+
+        Team senegal = new Team();
+        senegal.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        senegal.setAbbreviation("SEN");
+        senegal.setTeamName("Senegal");
+
+        Team nigeria = new Team();
+        nigeria.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(1));
+        nigeria.setAbbreviation("NGA");
+        nigeria.setTeamName("Nigeria");
+
+        Team argentina = new Team();
+        argentina.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(3));
+        argentina.setAbbreviation("ARG");
+        argentina.setTeamName("Argentina");
+
+        Team brazil = new Team();
+        brazil.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(3));
+        brazil.setAbbreviation("BRA");
+        brazil.setTeamName("Brazil");
+
+        Team uruguay = new Team();
+        uruguay.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(3));
+        uruguay.setAbbreviation("URU");
+        uruguay.setTeamName("Uruguay");
+
+        Team paraguay = new Team();
+        paraguay.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(3));
+        paraguay.setAbbreviation("PAR");
+        paraguay.setTeamName("Paraguay");
+
+        Team chile = new Team();
+        chile.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(3));
+        chile.setAbbreviation("CHI");
+        chile.setTeamName("Chile");
+
+        Team colombia = new Team();
+        colombia.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(3));
+        colombia.setAbbreviation("COL");
+        colombia.setTeamName("Colombia");
+
+        Team peru = new Team();
+        peru.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(3));
+        peru.setAbbreviation("PER");
+        peru.setTeamName("Peru");
+
+
 
         listView.getItems().add(canada);
         listView.getItems().add(mexico);
@@ -119,6 +200,16 @@ public class GroupsMakingPageController {
         listView.getItems().add(qatar);
         listView.getItems().add(southKorea);
         listView.getItems().add(china);
+
+        listView.getItems().add(algeria);
+        listView.getItems().add(angola);
+        listView.getItems().add(senegal);
+        listView.getItems().add(tunisia);
+        listView.getItems().add(ivoryCoast);
+        listView.getItems().add(ghana);
+        listView.getItems().add(nigeria);
+        listView.getItems().add(morocco);
+        listView.getItems().add(cameroon);
 
 
 
