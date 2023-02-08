@@ -11,12 +11,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Random;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class TeamsSelectingPageController {
 
@@ -178,7 +183,7 @@ public class TeamsSelectingPageController {
         }
     }
 
-    public void onClickFinishButton(ActionEvent actionEvent) {
+    public void onClickFinishButton(ActionEvent actionEvent) throws IOException {
         if(listView.getItems().size()<48){
             int numOfAFC=0;
             int numOfCAF=0;
@@ -290,7 +295,14 @@ public class TeamsSelectingPageController {
 
         }
 
-
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/GroupsMakingPageController.fxml"));
+        Parent root = loader.load();
+        stage.setTitle("WC2026");
+        stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        stage.setResizable(false);
+        stage.getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
+        stage.show();
 
 
     }
