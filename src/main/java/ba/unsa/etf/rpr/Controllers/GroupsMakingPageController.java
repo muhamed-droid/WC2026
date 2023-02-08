@@ -1,13 +1,19 @@
 package ba.unsa.etf.rpr.Controllers;
 
 import ba.unsa.etf.rpr.Business.ConfederationManager;
+import ba.unsa.etf.rpr.domain.Finalist;
 import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+
+import java.util.ArrayList;
 
 public class GroupsMakingPageController {
 
@@ -384,6 +390,19 @@ public class GroupsMakingPageController {
         choiceBox2.getItems().add(g15);
         choiceBox2.getItems().add(g16);
 
+        pagination.setPageCount(16);
+        pagination.setMaxPageIndicatorCount(16);
+
+        pagination.setPageFactory((pageIndex) -> {
+
+            Label label1 = new Label("Group  " + pageIndex + ": ");
+            label1.setFont(new Font("Arial", 24));
+
+            ArrayList<Finalist> list = new ArrayList<>();
+            Label label2 = new Label("Main content of the page ...");
+
+            return new VBox(label1, label2);
+        });
 
     }
 
