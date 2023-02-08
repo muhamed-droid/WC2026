@@ -385,9 +385,6 @@ public class GroupsMakingPageController {
         choiceBox2.getItems().add(g16);
 
 
-        //for (int i = 0; i < DaoFactory.finalistDao().getAll().size(); i++){
-          //  choiceBox1.getItems().add(DaoFactory.finalistDao().getAll().get(i).getTeam());
-        //}
     }
 
 
