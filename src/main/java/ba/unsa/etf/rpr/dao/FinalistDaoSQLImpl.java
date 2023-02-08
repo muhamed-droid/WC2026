@@ -32,6 +32,7 @@ public class FinalistDaoSQLImpl  extends AbstractDao<Finalist> implements Finali
         try {
             Finalist finalist = new Finalist();
             finalist.setId(rs.getInt("id"));
+            //finalist.setTeam(rs.g("team_id"));
             return finalist;
         } catch (SQLException e) {
             throw new MyException(e.getMessage(), e);
@@ -42,6 +43,7 @@ public class FinalistDaoSQLImpl  extends AbstractDao<Finalist> implements Finali
     public Map<String, Object> object2row(Finalist object) {
         Map<String, Object> row = new TreeMap<>();
         row.put("id", object.getId());
+        //row.put("team_id", object.)
         return row;
     }
 
