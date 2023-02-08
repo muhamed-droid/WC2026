@@ -9,16 +9,18 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Class where DaoSQLImplementation is written for domain class Confederation
+ * @author muhamed-droid
+ */
+
 public class ConfederationDaoSQLImpl extends AbstractDao<Confederation> implements ConfederationDao {
 
-    /**
-     * @param id for searching
-     * @return specific Confederation for specific id from db
-     * @author muhamed-droid
-     */
+
 
 
     private static  ConfederationDaoSQLImpl instance = null;
+
     public ConfederationDaoSQLImpl() {
         super("confederations");
     }
