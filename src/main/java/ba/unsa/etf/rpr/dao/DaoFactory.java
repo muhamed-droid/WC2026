@@ -5,6 +5,7 @@ public class DaoFactory {
     private static final GroupDao groupDao = GroupDaoSQLImpl.getInstance();
     private static final TableDao tableDao = TableDaoSQLImpl.getInstance();
     private static final TeamDao teamDao = TeamDaoSQLImpl.getInstance();
+    private static final FinalistDao finalistDao = FinalistDaoSQLImpl.getInstance();
 
     private DaoFactory(){
     }
@@ -25,6 +26,6 @@ public class DaoFactory {
         return tableDao;
     }
 
-    public static FinalistDao finalistDao() {return finalistDao();}
+    public static FinalistDao finalistDao() {return finalistDao;}
 
 }
