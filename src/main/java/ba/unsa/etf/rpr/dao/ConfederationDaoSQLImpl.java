@@ -16,21 +16,34 @@ import java.util.TreeMap;
 
 public class ConfederationDaoSQLImpl extends AbstractDao<Confederation> implements ConfederationDao {
 
-
-
-
     private static  ConfederationDaoSQLImpl instance = null;
+
+    /**
+     * @constructor that calls super constructor
+     * @author muhamed-droid
+     */
 
     public ConfederationDaoSQLImpl() {
         super("confederations");
     }
 
+
+    /**
+     * no params
+     * @return instance of ConfederationDaoSQLImpl
+     * @author muhamed-droid
+     */
     public static ConfederationDaoSQLImpl getInstance(){
         if(instance==null)
             instance = new ConfederationDaoSQLImpl();
         return instance;
     }
 
+    /**
+     * Method for removing Instance
+     * @return void
+     * @author muhamed-droid
+     */
     public static void removeInstance(){
         if(instance!=null)
             instance=null;
