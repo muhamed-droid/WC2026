@@ -23,6 +23,8 @@ public class GroupsMakingPageController {
     @FXML
     private Pagination pagination = new Pagination();
 
+    public int counter=0;
+
     @FXML
     public void initialize() {
 
@@ -412,6 +414,13 @@ public class GroupsMakingPageController {
 
 
     public void onAddButtonClick(ActionEvent actionEvent) {
-        choiceBox1.getValue().setGroup(choiceBox2.getValue());
+        if(counter==48){
+
+        }else{
+            choiceBox1.getValue().setGroup(choiceBox2.getValue());
+            counter++;
+        }
+
     }
+
 }
