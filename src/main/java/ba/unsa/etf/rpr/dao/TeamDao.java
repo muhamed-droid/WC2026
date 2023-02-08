@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Dao interface for Team domain bean
  *
- * @author Dino Keco
+ * @author muhamed-droid
  */
 public interface TeamDao extends Dao<Team> {
 
