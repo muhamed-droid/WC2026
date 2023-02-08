@@ -42,7 +42,24 @@ public class TeamsSelectingPageController {
 
         ConfederationManager confederationManager = new ConfederationManager();
 
+        Team canada = new Team();
+        canada.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        canada.setAbbreviation("CAN");
+        canada.setTeamName("Canada");
 
+        Team mexico = new Team();
+        mexico.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        mexico.setAbbreviation("MEX");
+        mexico.setTeamName("Mexico");
+
+        Team usa = new Team();
+        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        usa.setAbbreviation("USA");
+        usa.setTeamName("United states");
+
+        listView.getItems().add(canada);
+        listView.getItems().add(mexico);
+        listView.getItems().add(usa);
     //
         choiceBox1.setItems(FXCollections.observableList(confederationManager.getAll()));
 
@@ -75,44 +92,44 @@ public class TeamsSelectingPageController {
         ConfederationDaoSQLImpl dao1 = new ConfederationDaoSQLImpl();
 
         for(Team t : items){
-            if(t.getConfederation()==dao1.getById(0)){
+            if(t.getConfederation().equals(dao1.getById(1))){
                 numOfAFC++;
             }
-            if(t.getConfederation()==dao1.getById(1)){
+            if(t.getConfederation().equals(dao1.getById(2))){
                 numOfCAF++;
             }
-            if(t.getConfederation()==dao1.getById(2)){
+            if(t.getConfederation().equals(dao1.getById(3))){
                 numOfCONCACAF++;
             }
-            if(t.getConfederation()==dao1.getById(3)){
+            if(t.getConfederation().equals(dao1.getById(4))){
                 numOfCONMEBOL++;
             }
-            if(t.getConfederation()==dao1.getById(4)){
+            if(t.getConfederation().equals(dao1.getById(5))){
                 numOfOFC++;
             }
-            if(t.getConfederation()==dao1.getById(5)){
+            if(t.getConfederation().equals(dao1.getById(6))){
                 numOfUEFA++;
             }
         }
 
-        if(newTeam.getConfederation()==dao1.getById(0)){
+        if(newTeam.getConfederation().equals(dao1.getById(1))){
             if(numOfAFC==8) return false;
         }
 
-        if(newTeam.getConfederation()==dao1.getById(1)){
+        if(newTeam.getConfederation().equals(dao1.getById(2))){
             if(numOfCAF==9) return false;
         }
-        if(newTeam.getConfederation()==dao1.getById(2)){
+        if(newTeam.getConfederation().equals(dao1.getById(3))){
             if(numOfCONCACAF==7) return false;
         }
 
-        if(newTeam.getConfederation()==dao1.getById(3)){
+        if(newTeam.getConfederation().equals(dao1.getById(4))){
             if(numOfCONMEBOL==7) return false;
         }
-        if(newTeam.getConfederation()==dao1.getById(4)){
+        if(newTeam.getConfederation().equals(dao1.getById(5))){
             if(numOfOFC==1) return false;
         }
-        if(newTeam.getConfederation()==dao1.getById(5)){
+        if(newTeam.getConfederation().equals(dao1.getById(6))){
             if(numOfUEFA==16) return false;
         }
         return true;
