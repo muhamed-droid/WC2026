@@ -10,22 +10,6 @@ import java.util.*;
 
 public class TeamDaoSQLImpl extends AbstractDao<Team> implements TeamDao {
 
-
-    /**
-     * @param id for searching confederation for teams
-     * @return specific Confederation for specific team from db
-     * @author muhamed-droid
-     */
-
-
-
-    /**
-     * @param id for searching group for teams
-     * @return specific Group for specific team from db
-     * @author muhamed-droid
-     */
-
-
     /**
      * @param confederation search confederation for teams
      * @return list of teams
@@ -50,11 +34,6 @@ public class TeamDaoSQLImpl extends AbstractDao<Team> implements TeamDao {
         return executeQuery("SELECT * FROM teams WHERE group_id = ?", new Object[]{group});
     }
 
-    @Override
-    public List<Team> searchByName(String name) {
-        //Treba implementirati searchByName
-        return null;
-    }
 
     private static  TeamDaoSQLImpl instance = null;
     public TeamDaoSQLImpl() {
