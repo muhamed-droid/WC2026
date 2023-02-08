@@ -9,9 +9,9 @@
    <children>
       <TabPane layoutX="7.0" prefHeight="400.0" prefWidth="593.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Untitled Tab 1" />
-          <Tab text="Untitled Tab 2" />
-            <Tab text="Untitled Tab 2" />
+          <Tab text="Games" />
+          <Tab text="Tables" />
+            <Tab text="Knockout Stage" />
         </tabs>
       </TabPane>
    </children>
