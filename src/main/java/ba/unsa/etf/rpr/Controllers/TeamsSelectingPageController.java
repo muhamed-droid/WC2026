@@ -301,15 +301,14 @@ public class TeamsSelectingPageController {
 
 
 
-
-        Stage stage = new Stage();
+        /*Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/GroupsMakingPageController.fxml"));
         Parent root = loader.load();
         stage.setTitle("WC2026");
         stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         stage.setResizable(false);
         stage.getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
-        stage.show();
+        stage.show(); */
 
 
     }
