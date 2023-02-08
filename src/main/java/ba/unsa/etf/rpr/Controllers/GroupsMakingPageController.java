@@ -395,12 +395,19 @@ public class GroupsMakingPageController {
 
         pagination.setPageFactory((pageIndex) -> {
 
-            Label label1 = new Label("Group  " + pageIndex + ": ");
+            Label label1 = new Label("Group  " + pageIndex + ":\n");
             label1.setFont(new Font("Arial", 24));
 
-            ArrayList<Finalist> list = new ArrayList<>();
-            Label label2 = new Label("Main content of the page ...");
+            Group g = new Group();
+            g.setId(pageIndex);
 
+            Label label2 = new Label("");
+            for(Team t : choiceBox1.getItems())
+            {
+                if(t.getGroup().equals(g)){
+                    label2.setText(label2.getText() + t.toString() + "\n");
+                }
+            }
             return new VBox(label1, label2);
         });
 
