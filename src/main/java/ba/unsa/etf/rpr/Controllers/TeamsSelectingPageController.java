@@ -284,8 +284,7 @@ public class TeamsSelectingPageController {
             for(int i = 0; i<diffUEFA; i++){
                 Random rand = new Random();
                 int int_random = rand.nextInt(55);
-                Team newTeam = new Team();
-                newTeam = dao.searchByConfederation(dao1.getById(6)).get(int_random);
+                Team newTeam = dao.searchByConfederation(dao1.getById(6)).get(int_random);
                 if(listView.getItems().contains(newTeam)){
                     i--;
                 }else {
