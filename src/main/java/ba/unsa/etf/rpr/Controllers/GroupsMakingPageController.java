@@ -392,8 +392,6 @@ public class GroupsMakingPageController {
 
 
     public void onAddButtonClick(ActionEvent actionEvent) {
-
-
-
+        choiceBox1.getValue().setGroup(choiceBox2.getValue());
     }
 }
