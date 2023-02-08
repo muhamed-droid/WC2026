@@ -52,7 +52,7 @@
                            </FlowPane.margin>
                         </Button>
                         <ListView fx:id="listView" prefHeight="141.0" prefWidth="317.0" />
-                        <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="318.0" text="Finish" />
+                        <Button fx:id="finishButton" mnemonicParsing="false" onAction="#onClickFinishButton" prefHeight="51.0" prefWidth="318.0" text="Finish" />
                      </children>
                   </FlowPane>
                </content>
