@@ -392,7 +392,7 @@ public class GroupsMakingPageController {
 
         pagination.setPageFactory((pageIndex) -> {
 
-            Label label1 = new Label("Group  " + pageIndex + ":\n");
+            Label label1 = new Label("Group  " + (pageIndex+1) + ":\n");
             label1.setFont(new Font("Arial", 24));
 
             Group g = new Group();
@@ -401,7 +401,7 @@ public class GroupsMakingPageController {
             Label label2 = new Label("");
             for(Team t : choiceBox1.getItems())
             {
-                if(t.getGroup().equals(g)){
+                if(t.getGroup()!=null && t.getGroup().equals(g)){
                     label2.setText(label2.getText() + t.toString() + "\n");
                 }
             }
