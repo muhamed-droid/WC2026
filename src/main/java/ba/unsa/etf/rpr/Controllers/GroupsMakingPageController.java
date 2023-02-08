@@ -5,13 +5,13 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Pagination;
 
 public class GroupsMakingPageController {
 
     @FXML
-    private ListView<Team> listView = new ListView<>();
+    private ChoiceBox<Team> choiceBox1 = new ChoiceBox<>();
 
     @FXML
     private Pagination pagination = new Pagination();
@@ -325,7 +325,6 @@ public class GroupsMakingPageController {
         listView.getItems().add(italy);
         listView.getItems().add(france);
         listView.getItems().add(turkey);
-
 
 
         for (int i = 0; i < DaoFactory.finalistDao().getAll().size(); i++){
