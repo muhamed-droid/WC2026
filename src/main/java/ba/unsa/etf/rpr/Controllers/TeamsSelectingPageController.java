@@ -2,10 +2,9 @@ package ba.unsa.etf.rpr.Controllers;
 
 import ba.unsa.etf.rpr.Business.ConfederationManager;
 import ba.unsa.etf.rpr.Business.TeamManager;
-import ba.unsa.etf.rpr.dao.ConfederationDaoSQLImpl;
-import ba.unsa.etf.rpr.dao.TeamDao;
-import ba.unsa.etf.rpr.dao.TeamDaoSQLImpl;
+import ba.unsa.etf.rpr.dao.*;
 import ba.unsa.etf.rpr.domain.Confederation;
+import ba.unsa.etf.rpr.domain.Finalist;
 import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -292,6 +291,14 @@ public class TeamsSelectingPageController {
             }
 
         }
+
+        for(int i=0; i<listView.getItems().size(); i++){
+            Finalist finalist = new Finalist();
+            finalist.setId(i);
+            finalist.setTeam(listView.getItems().get(i));
+            DaoFactory.finalistDao().add(finalist);
+        }
+
 
 
 
