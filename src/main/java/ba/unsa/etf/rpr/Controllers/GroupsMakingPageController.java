@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.Controllers;
 
 import ba.unsa.etf.rpr.Business.ConfederationManager;
+import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -12,7 +13,8 @@ public class GroupsMakingPageController {
     @FXML
     private ChoiceBox<Team> choiceBox1 = new ChoiceBox<>();
 
-    private ChoiceBox<String> choiceBox2 = new ChoiceBox<>();
+    @FXML
+    private ChoiceBox<Group> choiceBox2 = new ChoiceBox<>();
 
     @FXML
     private Pagination pagination = new Pagination();
@@ -327,10 +329,59 @@ public class GroupsMakingPageController {
         choiceBox1.getItems().add(france);
         choiceBox1.getItems().add(turkey);
 
-        choiceBox2.getItems().add("1");
-        choiceBox2.getItems().add("2");
-        choiceBox2.getItems().add("3");
+        Group g1 = new Group();
+        g1.setId(1);
+        Group g2 = new Group();
+        g1.setId(2);
+        Group g3 = new Group();
+        g1.setId(3);
+        Group g4 = new Group();
+        g1.setId(4);
+        Group g5 = new Group();
+        g1.setId(5);
+        Group g6 = new Group();
+        g1.setId(6);
+        Group g7 = new Group();
+        g1.setId(7);
+        Group g8 = new Group();
+        g1.setId(8);
+        Group g9 = new Group();
+        g1.setId(9);
+        Group g10 = new Group();
+        g1.setId(10);
+        Group g11 = new Group();
+        g1.setId(11);
+        Group g12 = new Group();
+        g1.setId(12);
+        Group g13 = new Group();
+        g1.setId(13);
+        Group g14 = new Group();
+        g1.setId(14);
+        Group g15 = new Group();
+        g1.setId(15);
+        Group g16 = new Group();
+        g1.setId(16);
 
+
+        choiceBox2.getItems().add(g1);
+        choiceBox2.getItems().add(g2);
+        choiceBox2.getItems().add(g3);
+        choiceBox2.getItems().add(g4);
+
+        choiceBox2.getItems().add(g5);
+        choiceBox2.getItems().add(g6);
+        choiceBox2.getItems().add(g7);
+        choiceBox2.getItems().add(g8);
+
+        choiceBox2.getItems().add(g9);
+        choiceBox2.getItems().add(g10);
+        choiceBox2.getItems().add(g11);
+        choiceBox2.getItems().add(g12);
+
+        choiceBox2.getItems().add(g13);
+        choiceBox2.getItems().add(g14);
+        choiceBox2.getItems().add(g15);
+        choiceBox2.getItems().add(g16);
 
 
         //for (int i = 0; i < DaoFactory.finalistDao().getAll().size(); i++){
