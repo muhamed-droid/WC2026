@@ -30,23 +30,6 @@ public class ConfederationManager {
         }
     }
 
-    public void delete(int categoryId) throws MyException{
-        try{
-            DaoFactory.confederationDao().delete(categoryId);
-        }catch (MyException e){
-            if (e.getMessage().contains("FOREIGN KEY")){
-                throw new MyException("Cannot delete confederation which is related to teams." +
-                        " First delete related teams before deleting confederation.");
-            }
-            throw e;
-        }
-
-    }
-
-    public Confederation update(Confederation con) throws MyException{
-        return DaoFactory.confederationDao().update(con);
-    }
-
     public List<Confederation> getAll() throws MyException{
         return DaoFactory.confederationDao().getAll();
     }
