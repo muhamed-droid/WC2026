@@ -121,18 +121,20 @@ public class TeamsSelectingPageController {
 
     public void onAddButtonClick(ActionEvent actionEvent) {
 
+        Team newTeam = new Team();
+        newTeam = choiceBox2.getValue();
 
-        if(!listView.getItems().contains(choiceBox2.getValue())){
+        if(!listView.getItems().contains(newTeam)){
 
-            if(!listView.getItems().isEmpty() && !regulationsCheck(listView.getItems(), choiceBox2.getValue())) {
+            if(!listView.getItems().isEmpty() && !regulationsCheck(listView.getItems(), newTeam)) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("WC2026");
                 alert.setHeaderText("Warning!");
-                alert.setContentText("Too many teams from " + choiceBox2.getValue().getConfederation() + ". Check the regulations!");
+                alert.setContentText("Too many teams from " + newTeam.getConfederation() + ". Check the regulations!");
                 ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
                 alert.showAndWait();
             }else{
-                listView.getItems().add(choiceBox2.getValue());
+                listView.getItems().add(newTeam);
             }
 
         }
@@ -140,7 +142,7 @@ public class TeamsSelectingPageController {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("WC2026");
             alert.setHeaderText("Warning!");
-            alert.setContentText("You have already added " + choiceBox2.getValue().getTeamName() + "!");
+            alert.setContentText("You have already added " + newTeam.getTeamName() + "!");
             ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
             alert.showAndWait();
         }
