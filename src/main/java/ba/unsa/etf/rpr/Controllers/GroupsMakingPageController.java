@@ -1,14 +1,10 @@
 package ba.unsa.etf.rpr.Controllers;
 
-import ba.unsa.etf.rpr.Business.ConfederationManager;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Team;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Pagination;
-
-import java.util.ArrayList;
 
 public class GroupsMakingPageController {
 
