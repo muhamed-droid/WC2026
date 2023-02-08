@@ -1,7 +1,6 @@
 package ba.unsa.etf.rpr.Controllers;
 
 import ba.unsa.etf.rpr.Business.ConfederationManager;
-import ba.unsa.etf.rpr.domain.Finalist;
 import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
@@ -12,8 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
-
-import java.util.ArrayList;
 
 public class GroupsMakingPageController {
 
