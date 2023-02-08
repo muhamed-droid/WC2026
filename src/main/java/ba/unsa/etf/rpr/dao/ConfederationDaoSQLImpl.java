@@ -41,7 +41,7 @@ public class ConfederationDaoSQLImpl extends AbstractDao<Confederation> implemen
 
     /**
      * Method for removing Instance
-     * @return
+     * void function
      * @author muhamed-droid
      */
     public static void removeInstance(){

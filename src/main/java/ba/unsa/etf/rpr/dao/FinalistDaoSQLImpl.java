@@ -36,7 +36,7 @@ public class FinalistDaoSQLImpl  extends AbstractDao<Finalist> implements Finali
 
     /**
      *
-     * @return
+     * void function
      * It removes Instance
      *
      * @author muhamed-droid
