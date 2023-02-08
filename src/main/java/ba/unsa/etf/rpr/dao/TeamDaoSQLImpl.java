@@ -210,6 +210,7 @@ public class TeamDaoSQLImpl extends AbstractDao<Team> implements TeamDao {
             team.setId(rs.getInt("id"));
             team.setTeamName(rs.getString("team_name"));
             team.setAbbreviation(rs.getString("abbreviation"));
+            team.setConfederation(DaoFactory.confederationDao().getById(rs.getInt("confederation_id")));
             return team;
         } catch (SQLException e) {
             throw new MyException(e.getMessage(), e);

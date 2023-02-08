@@ -152,6 +152,7 @@ public class ConfederationDaoSQLImpl extends AbstractDao<Confederation> implemen
         row.put("id", object.getId());
         row.put("full_name", object.getFullName());
         row.put("abbreviation", object.getAbbreviation());
+
         return row;
     }
 }
