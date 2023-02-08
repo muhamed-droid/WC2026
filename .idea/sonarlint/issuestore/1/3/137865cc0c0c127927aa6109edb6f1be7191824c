@@ -1,0 +1,9 @@
+
+Q	java:S125"<This block of commented-out lines of code should be removed.(èø†±
+V	java:S125K"<This block of commented-out lines of code should be removed.(˜ë¥¢şÿÿÿÿ
+\
+java:S1128"ARemove this unused import 'ba.unsa.etf.rpr.domain.Confederation'.(õ¿é³ÿÿÿÿÿ
+M
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ
+F
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
