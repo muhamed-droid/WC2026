@@ -23,8 +23,6 @@ X
 (src/main/java/ba/unsa/etf/rpr/AppFX.java,6\2\622df6f0b962fdbad04c0d810f003c386a56a9f1
 ^
 .src/main/java/ba/unsa/etf/rpr/domain/Team.java,c\4\c4809ba23ecc6c068e2853a238584b8bf35df36c
-y
-Isrc/main/java/ba/unsa/etf/rpr/Controllers/GroupsMakingPageController.java,e\7\e7daa6f76396ef9eb1e793cc24aec970831a519c
 g
 7src/main/java/ba/unsa/etf/rpr/dao/ConfederationDao.java,f\2\f2e08a0d98c8efc92ab03dfed77ea03fbba59045
 ^
