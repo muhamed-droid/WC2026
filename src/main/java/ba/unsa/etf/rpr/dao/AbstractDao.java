@@ -125,6 +125,12 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
     }
 
+    /**
+     * @param item for updating specific table in database
+     * @return item
+     * @author muhamed-droid
+     */
+
     public T update(T item) throws MyException{
         Map<String, Object> row = object2row(item);
         String updateColumns = prepareUpdateParts(row);
