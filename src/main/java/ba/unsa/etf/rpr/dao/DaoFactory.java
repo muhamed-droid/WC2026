@@ -26,7 +26,7 @@ public class DaoFactory {
 
     /**
      *
-     * @return ConfederationDao
+     * @return ConfederationDao instance
      * @author muhamed-droid
      */
     public static ConfederationDao confederationDao(){
@@ -36,7 +36,7 @@ public class DaoFactory {
 
     /**
      *
-     * @return GroupDao
+     * @return GroupDao instance
      * @author muhamed-droid
      */
     public static GroupDao groupDao(){
@@ -45,7 +45,7 @@ public class DaoFactory {
 
     /**
      *
-     * @return TeamDao
+     * @return TeamDao instance
      * @author muhamed-droid
      */
     public static TeamDao teamDao(){
@@ -54,7 +54,7 @@ public class DaoFactory {
 
     /**
      *
-     * @return TableDao
+     * @return TableDao instance
      * @author muhamed-droid
      */
     public static TableDao tableDao(){
@@ -63,7 +63,7 @@ public class DaoFactory {
 
     /**
      *
-     * @return FinalistDao
+     * @return FinalistDao instance
      * @author muhamed-droid
      */
     public static FinalistDao finalistDao() {return finalistDao;}
