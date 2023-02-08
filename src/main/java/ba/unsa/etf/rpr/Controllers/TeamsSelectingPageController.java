@@ -30,14 +30,19 @@ public class TeamsSelectingPageController {
     public void initialize() {
 
         ConfederationManager confederationManager = new ConfederationManager();
-        TeamManager teamManager = new TeamManager();
 
 
-
-        choiceBox1.setValue(FXCollections.observableList(confederationManager.getAll()).get(0));
+    //
         choiceBox1.setItems(FXCollections.observableList(confederationManager.getAll()));
 
         //choiceBox1.setValue();
+        choiceBox1.setOnAction(this::getTeams);
+
+
+    }
+
+    private void getTeams (ActionEvent event) {
+        TeamManager teamManager = new TeamManager();
         choiceBox2.setItems(FXCollections.observableList(teamManager.searchTeamsInConfederation(choiceBox1.getValue())));
         choiceBox2.setValue(FXCollections.observableList(teamManager.searchTeamsInConfederation(choiceBox1.getValue())).get(0));
         choiceBox2.setOnAction(this::getTeam);
