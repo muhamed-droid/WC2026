@@ -7,7 +7,7 @@ Project requirments are listed below:
 2. README.md file with project description (0.5 points)
 3. Maven project (0.5 points)
 4. 10 unit tests. The use of mocks is mandatory for at least 2 tests. (2 points)
-5. Three-tier application architecture (2 points)
+5. Three-layer application architecture (2 points)
 6. MySQL Database with a minimum of 3 tables (1 point)
 7. User defined exception (1 point)
 8. JavaBeans classes for data transfer (2 points)
