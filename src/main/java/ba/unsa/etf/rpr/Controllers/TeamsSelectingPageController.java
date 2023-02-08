@@ -29,8 +29,6 @@ public class TeamsSelectingPageController {
     @FXML
     public void initialize() {
 
-
-
         ConfederationManager confederationManager = new ConfederationManager();
         TeamManager teamManager = new TeamManager();
 
