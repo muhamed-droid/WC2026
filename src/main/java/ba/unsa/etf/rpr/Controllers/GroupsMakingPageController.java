@@ -4,6 +4,7 @@ import ba.unsa.etf.rpr.Business.ConfederationManager;
 import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Pagination;
@@ -390,4 +391,9 @@ public class GroupsMakingPageController {
     }
 
 
+    public void onAddButtonClick(ActionEvent actionEvent) {
+
+
+
+    }
 }
