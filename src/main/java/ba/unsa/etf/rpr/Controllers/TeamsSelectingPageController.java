@@ -181,7 +181,7 @@ public class TeamsSelectingPageController {
         }
     }
 
-    public void onClickRandomButton(ActionEvent actionEvent) throws IOException {
+    public void onClickRandomButton(ActionEvent actionEvent){
         if (listView.getItems().size() < 48) {
             int numOfAFC = 0;
             int numOfCAF = 0;
