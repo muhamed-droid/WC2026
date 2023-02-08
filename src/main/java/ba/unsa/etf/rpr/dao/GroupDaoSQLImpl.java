@@ -11,24 +11,36 @@ import java.util.TreeMap;
 public class GroupDaoSQLImpl extends AbstractDao<Group> implements GroupDao {
 
 
-    /**
-     * @param id for searching
-     * @return specific Group for specific id from db
-     * @author muhamed-droid
-     */
+
 
 
     private static  GroupDaoSQLImpl instance = null;
+
+    /**
+     * @constructor that calls super
+     *
+     * @author muhamed-droid
+     */
     public GroupDaoSQLImpl() {
         super("groups");
     }
 
+    /**
+     *
+     * @return instance of GroupDaoSQLImpl
+     * @author muhamed-droid
+     */
     public static GroupDaoSQLImpl getInstance(){
         if(instance==null)
             instance = new GroupDaoSQLImpl();
         return instance;
     }
 
+    /**
+     *
+     * remove instance of GroupDaoSQLImpl
+     * @author muhamed-droid
+     */
     public static void removeInstance(){
         if(instance!=null)
             instance=null;
