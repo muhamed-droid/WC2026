@@ -13,7 +13,7 @@ public class FinalistDaoSQLImpl  extends AbstractDao<Finalist> implements Finali
     private static  FinalistDaoSQLImpl instance = null;
 
     /**
-     * @constructor that calls super
+     * constructor that calls super
      *
      * @author muhamed-droid
      */
@@ -36,7 +36,7 @@ public class FinalistDaoSQLImpl  extends AbstractDao<Finalist> implements Finali
 
     /**
      *
-     * @return void
+     * @return
      * It removes Instance
      *
      * @author muhamed-droid

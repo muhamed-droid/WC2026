@@ -17,7 +17,7 @@ public class GroupDaoSQLImpl extends AbstractDao<Group> implements GroupDao {
     private static  GroupDaoSQLImpl instance = null;
 
     /**
-     * @constructor that calls super
+     * constructor that calls super
      *
      * @author muhamed-droid
      */

@@ -12,7 +12,7 @@ public class TableDaoSQLImpl extends AbstractDao<Table> implements TableDao {
 
     private static  TableDaoSQLImpl instance = null;
     /**
-     * @constructor that calls super
+     * constructor that calls super
      *
      * @author muhamed-droid
      */

@@ -19,7 +19,7 @@ public class ConfederationDaoSQLImpl extends AbstractDao<Confederation> implemen
     private static  ConfederationDaoSQLImpl instance = null;
 
     /**
-     * @constructor that calls super constructor
+     * constructor that calls super constructor
      * @author muhamed-droid
      */
 
@@ -41,7 +41,7 @@ public class ConfederationDaoSQLImpl extends AbstractDao<Confederation> implemen
 
     /**
      * Method for removing Instance
-     * @return void
+     * @return
      * @author muhamed-droid
      */
     public static void removeInstance(){

@@ -37,7 +37,7 @@ public class TeamDaoSQLImpl extends AbstractDao<Team> implements TeamDao {
 
     private static  TeamDaoSQLImpl instance = null;
     /**
-     * @constructor that calles super
+     * constructor that calles super
      *
      * @author muhamed-droid
      */
