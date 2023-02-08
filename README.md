@@ -18,7 +18,7 @@ Project requirments are listed below:
 13. JavaDoc documentation (1 point)
 14. Using .properties files for configuration (1 point)
 
-I picked up one interesting application to work on. It is called WC2026. 
+I picked up one interesting application to work on. It is named WC2026. 
 World cup 2026 is a simulation of the world cup 2026. 
 User can start simulation, pick teams to participate in the world cup. 
 User needs to place teams in groups, respecting certain restrictions. 
