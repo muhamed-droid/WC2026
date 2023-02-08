@@ -64,10 +64,9 @@ public class TeamsSelectingPageController {
         listView.getItems().add(canada);
         listView.getItems().add(mexico);
         listView.getItems().add(usa);
-    //
+
         choiceBox1.setItems(FXCollections.observableList(confederationManager.getAll()));
 
-        //choiceBox1.setValue();
         choiceBox1.setOnAction(this::getTeams);
 
 
@@ -292,18 +291,19 @@ public class TeamsSelectingPageController {
 
         }
 
-
-
-    }
-
-    public void onClickFinishButton(ActionEvent actionEvent) throws IOException {
-
         for (int i = 0; i < listView.getItems().size(); i++) {
             Finalist finalist = new Finalist();
             finalist.setId(i+1);
             finalist.setTeam(listView.getItems().get(i));
             DaoFactory.finalistDao().add(finalist);
         }
+
+
+    }
+
+    public void onClickFinishButton(ActionEvent actionEvent) throws IOException {
+
+
 
         Stage previusStage = (Stage) finishButton.getScene().getWindow();
         previusStage.close();
