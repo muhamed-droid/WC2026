@@ -61,9 +61,25 @@ public class TeamsSelectingPageController {
         selectedTeam.setText(selected);
     }
 
+    public boolean regulationsCheck() {
+
+    }
+
+
     public void onAddButtonClick(ActionEvent actionEvent) {
+
+
+
         if(!listView.getItems().contains(choiceBox2.getValue())){
-            //listOfTeams.add(choiceBox2.getValue());
+
+            if(!regulationsCheck()) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("WC2026");
+                alert.setHeaderText("Warning!");
+                alert.setContentText("You have already added " + choiceBox2.getValue().getTeamName() + "!");
+                ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
+                alert.showAndWait();
+            }
             listView.getItems().add(choiceBox2.getValue());
         }
         else{
@@ -74,5 +90,8 @@ public class TeamsSelectingPageController {
             ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
             alert.showAndWait();
         }
+
+
+
     }
 }
