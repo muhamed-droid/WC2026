@@ -22,49 +22,85 @@ public class GroupsMakingPageController {
         ConfederationManager confederationManager = new ConfederationManager();
 
         Team canada = new Team();
+        //canada.setId(1);
         canada.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
         canada.setAbbreviation("CAN");
         canada.setTeamName("Canada");
 
         Team mexico = new Team();
+        //mexico.setId(2);
         mexico.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
         mexico.setAbbreviation("MEX");
         mexico.setTeamName("Mexico");
 
         Team usa = new Team();
+        //usa.setId(3);
         usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
         usa.setAbbreviation("USA");
         usa.setTeamName("United states");
 
         Team jamaica = new Team();
-        canada.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
-        canada.setAbbreviation("JAM");
-        canada.setTeamName("Jamaica");
+        //jamaica.setId(4);
+        jamaica.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        jamaica.setAbbreviation("JAM");
+        jamaica.setTeamName("Jamaica");
 
         Team honduras = new Team();
-        mexico.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
-        mexico.setAbbreviation("HON");
-        mexico.setTeamName("Honduras");
+        //honduras.setId(5);
+        honduras.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        honduras.setAbbreviation("HON");
+        honduras.setTeamName("Honduras");
 
         Team costaRica = new Team();
-        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
-        usa.setAbbreviation("CRC");
-        usa.setTeamName("Costa Rica");
+        //costaRica.setId(6);
+        costaRica.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        costaRica.setAbbreviation("CRC");
+        costaRica.setTeamName("Costa Rica");
 
         Team panama = new Team();
-        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
-        usa.setAbbreviation("PAN");
-        usa.setTeamName("Panama");
+        panama.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        panama.setAbbreviation("PAN");
+        panama.setTeamName("Panama");
 
         Team japan = new Team();
-        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
-        usa.setAbbreviation("JAP");
-        usa.setTeamName("Japan");
+        japan.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        japan.setAbbreviation("JAP");
+        japan.setTeamName("Japan");
 
         Team australia = new Team();
-        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
-        usa.setAbbreviation("AUS");
-        usa.setTeamName("Australia");
+        australia.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        australia.setAbbreviation("AUS");
+        australia.setTeamName("Australia");
+
+        Team china = new Team();
+        china.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        china.setAbbreviation("CHI");
+        china.setTeamName("China");
+
+        Team iran = new Team();
+        iran.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        iran.setAbbreviation("IRA");
+        iran.setTeamName("Iran");
+
+        Team qatar = new Team();
+        qatar.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        qatar.setAbbreviation("QAT");
+        qatar.setTeamName("Qatar");
+
+        Team saudiArabia = new Team();
+        saudiArabia.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        saudiArabia.setAbbreviation("KSA");
+        saudiArabia.setTeamName("Saudi Arabia");
+
+        Team southKorea = new Team();
+        southKorea.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        southKorea.setAbbreviation("KOR");
+        southKorea.setTeamName("South Korea");
+
+        Team uae = new Team();
+        uae.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        uae.setAbbreviation("UAE");
+        uae.setTeamName("United Arab Emirates");
 
 
         listView.getItems().add(canada);
@@ -74,8 +110,18 @@ public class GroupsMakingPageController {
         listView.getItems().add(panama);
         listView.getItems().add(honduras);
         listView.getItems().add(panama);
-        listView.getItems().add(mexico);
-        listView.getItems().add(usa);
+
+        listView.getItems().add(japan);
+        listView.getItems().add(australia);
+        listView.getItems().add(iran);
+        listView.getItems().add(saudiArabia);
+        listView.getItems().add(uae);
+        listView.getItems().add(qatar);
+        listView.getItems().add(southKorea);
+        listView.getItems().add(china);
+
+
+
 
         for (int i = 0; i < DaoFactory.finalistDao().getAll().size(); i++){
             listView.getItems().add(DaoFactory.finalistDao().getAll().get(i).getTeam());
