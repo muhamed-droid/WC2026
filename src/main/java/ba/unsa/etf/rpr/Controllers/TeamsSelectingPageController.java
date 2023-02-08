@@ -17,7 +17,6 @@ import java.io.IOException;
 
 public class TeamsSelectingPageController {
 
-    //private ArrayList<Team> listOfTeams = new ArrayList<>();
 
     @FXML
     private ChoiceBox<Confederation> choiceBox1 = new ChoiceBox<Confederation>();
