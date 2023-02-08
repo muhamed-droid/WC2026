@@ -142,7 +142,6 @@ public class TeamsSelectingPageController {
     public void onAddButtonClick(ActionEvent actionEvent) throws IOException {
 
         Team newTeam = choiceBox2.getValue();
-        //newTeam.setConfederation(choiceBox1.getValue());
 
         if(listView.getItems().size()<48){
 
