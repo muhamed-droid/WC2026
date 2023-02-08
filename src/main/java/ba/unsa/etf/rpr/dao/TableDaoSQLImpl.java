@@ -10,24 +10,33 @@ import java.util.TreeMap;
 
 public class TableDaoSQLImpl extends AbstractDao<Table> implements TableDao {
 
+    private static  TableDaoSQLImpl instance = null;
     /**
-     * @param id for searching table for specific id
-     * @return specific table for id from db
+     * @constructor that calls super
+     *
      * @author muhamed-droid
      */
-
-
-    private static  TableDaoSQLImpl instance = null;
     public TableDaoSQLImpl() {
         super("tables");
     }
 
+
+    /**
+     *
+     * @return instance of tableDaoSQLImpl
+     * @author muhamed-droid
+     */
     public static TableDaoSQLImpl getInstance(){
         if(instance==null)
             instance = new TableDaoSQLImpl();
         return instance;
     }
 
+    /**
+     *
+     * remove instance of tableDaoSQLImpl
+     * @author muhamed-droid
+     */
     public static void removeInstance(){
         if(instance!=null)
             instance=null;
