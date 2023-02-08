@@ -272,63 +272,63 @@ public class GroupsMakingPageController {
         norway.setTeamName("Norway");
 
 
-        listView.getItems().add(canada);
-        listView.getItems().add(mexico);
-        listView.getItems().add(usa);
-        listView.getItems().add(jamaica);
-        listView.getItems().add(panama);
-        listView.getItems().add(honduras);
-        listView.getItems().add(panama);
+        choiceBox1.getItems().add(canada);
+        choiceBox1.getItems().add(mexico);
+        choiceBox1.getItems().add(usa);
+        choiceBox1.getItems().add(jamaica);
+        choiceBox1.getItems().add(panama);
+        choiceBox1.getItems().add(honduras);
+        choiceBox1.getItems().add(panama);
 
-        listView.getItems().add(japan);
-        listView.getItems().add(australia);
-        listView.getItems().add(iran);
-        listView.getItems().add(saudiArabia);
-        listView.getItems().add(uae);
-        listView.getItems().add(qatar);
-        listView.getItems().add(southKorea);
-        listView.getItems().add(china);
+        choiceBox1.getItems().add(japan);
+        choiceBox1.getItems().add(australia);
+        choiceBox1.getItems().add(iran);
+        choiceBox1.getItems().add(saudiArabia);
+        choiceBox1.getItems().add(uae);
+        choiceBox1.getItems().add(qatar);
+        choiceBox1.getItems().add(southKorea);
+        choiceBox1.getItems().add(china);
 
-        listView.getItems().add(algeria);
-        listView.getItems().add(angola);
-        listView.getItems().add(senegal);
-        listView.getItems().add(tunisia);
-        listView.getItems().add(ivoryCoast);
-        listView.getItems().add(ghana);
-        listView.getItems().add(nigeria);
-        listView.getItems().add(morocco);
-        listView.getItems().add(cameroon);
+        choiceBox1.getItems().add(algeria);
+        choiceBox1.getItems().add(angola);
+        choiceBox1.getItems().add(senegal);
+        choiceBox1.getItems().add(tunisia);
+        choiceBox1.getItems().add(ivoryCoast);
+        choiceBox1.getItems().add(ghana);
+        choiceBox1.getItems().add(nigeria);
+        choiceBox1.getItems().add(morocco);
+        choiceBox1.getItems().add(cameroon);
 
-        listView.getItems().add(argentina);
-        listView.getItems().add(brazil);
-        listView.getItems().add(colombia);
-        listView.getItems().add(uruguay);
-        listView.getItems().add(paraguay);
-        listView.getItems().add(peru);
-        listView.getItems().add(chile);
+        choiceBox1.getItems().add(argentina);
+        choiceBox1.getItems().add(brazil);
+        choiceBox1.getItems().add(colombia);
+        choiceBox1.getItems().add(uruguay);
+        choiceBox1.getItems().add(paraguay);
+        choiceBox1.getItems().add(peru);
+        choiceBox1.getItems().add(chile);
 
-        listView.getItems().add(newZealand);
+        choiceBox1.getItems().add(newZealand);
 
-        listView.getItems().add(germany);
-        listView.getItems().add(netherlands);
-        listView.getItems().add(belgium);
-        listView.getItems().add(england);
-        listView.getItems().add(BiH);
-        listView.getItems().add(croatia);
-        listView.getItems().add(denmark);
-        listView.getItems().add(serbia);
-        listView.getItems().add(sweden);
-        listView.getItems().add(switzerland);
-        listView.getItems().add(spain);
-        listView.getItems().add(portugal);
-        listView.getItems().add(norway);
-        listView.getItems().add(italy);
-        listView.getItems().add(france);
-        listView.getItems().add(turkey);
+        choiceBox1.getItems().add(germany);
+        choiceBox1.getItems().add(netherlands);
+        choiceBox1.getItems().add(belgium);
+        choiceBox1.getItems().add(england);
+        choiceBox1.getItems().add(BiH);
+        choiceBox1.getItems().add(croatia);
+        choiceBox1.getItems().add(denmark);
+        choiceBox1.getItems().add(serbia);
+        choiceBox1.getItems().add(sweden);
+        choiceBox1.getItems().add(switzerland);
+        choiceBox1.getItems().add(spain);
+        choiceBox1.getItems().add(portugal);
+        choiceBox1.getItems().add(norway);
+        choiceBox1.getItems().add(italy);
+        choiceBox1.getItems().add(france);
+        choiceBox1.getItems().add(turkey);
 
 
         for (int i = 0; i < DaoFactory.finalistDao().getAll().size(); i++){
-            listView.getItems().add(DaoFactory.finalistDao().getAll().get(i).getTeam());
+            choiceBox1.getItems().add(DaoFactory.finalistDao().getAll().get(i).getTeam());
         }
     }
 
