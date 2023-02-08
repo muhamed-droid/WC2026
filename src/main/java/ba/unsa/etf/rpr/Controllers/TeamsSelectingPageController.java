@@ -7,11 +7,16 @@ import ba.unsa.etf.rpr.domain.Team;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class TeamsSelectingPageController {
+
+    //private ArrayList<Team> listOfTeams = new ArrayList<>();
 
     @FXML
     private ChoiceBox<Confederation> choiceBox1 = new ChoiceBox<Confederation>();
@@ -25,6 +30,9 @@ public class TeamsSelectingPageController {
 
     @FXML
     private Label selectedTeam = new Label();
+
+    @FXML
+    private ListView<Team> listView = new ListView<>();
 
     @FXML
     public void initialize() {
@@ -54,6 +62,17 @@ public class TeamsSelectingPageController {
     }
 
     public void onAddButtonClick(ActionEvent actionEvent) {
-
+        if(!listView.getItems().contains(choiceBox2.getValue())){
+            //listOfTeams.add(choiceBox2.getValue());
+            listView.getItems().add(choiceBox2.getValue());
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("WC2026");
+            alert.setHeaderText("Warning!");
+            alert.setContentText("You have already added " + choiceBox2.getValue().getTeamName() + "!");
+            ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
+            alert.showAndWait();
+        }
     }
 }
