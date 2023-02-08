@@ -7,7 +7,6 @@ import ba.unsa.etf.rpr.dao.TeamDao;
 import ba.unsa.etf.rpr.dao.TeamDaoSQLImpl;
 import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.domain.Team;
-import ba.unsa.etf.rpr.domain.Tournament;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
