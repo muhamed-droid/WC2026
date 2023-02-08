@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
@@ -15,5 +16,6 @@
   </rowConstraints>
    <children>
       <Pagination prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+      <Spinner />
    </children>
 </GridPane>

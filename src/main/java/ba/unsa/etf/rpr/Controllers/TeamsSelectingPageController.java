@@ -33,7 +33,7 @@ public class TeamsSelectingPageController {
     private ChoiceBox<Team> choiceBox2 = new ChoiceBox<Team>();
 
     @FXML
-    private Button addButton = new Button();
+    private Button finishButton = new Button();
 
     @FXML
     private Label selectedTeam = new Label();
@@ -181,35 +181,35 @@ public class TeamsSelectingPageController {
         }
     }
 
-    public void onClickFinishButton(ActionEvent actionEvent) throws IOException {
-        if(listView.getItems().size()<48){
-            int numOfAFC=0;
-            int numOfCAF=0;
-            int numOfCONCACAF=0;
-            int numOfCONMEBOL=0;
-            int numOfOFC=0;
-            int numOfUEFA=0;
+    public void onClickRandomButton(ActionEvent actionEvent) throws IOException {
+        if (listView.getItems().size() < 48) {
+            int numOfAFC = 0;
+            int numOfCAF = 0;
+            int numOfCONCACAF = 0;
+            int numOfCONMEBOL = 0;
+            int numOfOFC = 0;
+            int numOfUEFA = 0;
 
             ConfederationDaoSQLImpl dao1 = new ConfederationDaoSQLImpl();
             TeamDao dao = new TeamDaoSQLImpl();
 
-            for(Team t : listView.getItems()){
-                if(t.getConfederation().equals(dao1.getById(1))){
+            for (Team t : listView.getItems()) {
+                if (t.getConfederation().equals(dao1.getById(1))) {
                     numOfAFC++;
                 }
-                if(t.getConfederation().equals(dao1.getById(2))){
+                if (t.getConfederation().equals(dao1.getById(2))) {
                     numOfCAF++;
                 }
-                if(t.getConfederation().equals(dao1.getById(3))){
+                if (t.getConfederation().equals(dao1.getById(3))) {
                     numOfCONCACAF++;
                 }
-                if(t.getConfederation().equals(dao1.getById(4))){
+                if (t.getConfederation().equals(dao1.getById(4))) {
                     numOfCONMEBOL++;
                 }
-                if(t.getConfederation().equals(dao1.getById(5))){
+                if (t.getConfederation().equals(dao1.getById(5))) {
                     numOfOFC++;
                 }
-                if(t.getConfederation().equals(dao1.getById(6))){
+                if (t.getConfederation().equals(dao1.getById(6))) {
                     numOfUEFA++;
                 }
             }
@@ -221,95 +221,98 @@ public class TeamsSelectingPageController {
             int diffOFC = 1 - numOfOFC;
             int diffUEFA = 16 - numOfUEFA;
 
-            for(int i = 0; i<diffAFC; i++){
+            for (int i = 0; i < diffAFC; i++) {
                 Random rand = new Random();
                 int int_random = rand.nextInt(45);
                 Team newTeam = new Team();
                 newTeam = dao.searchByConfederation(dao1.getById(1)).get(int_random);
-                if(listView.getItems().contains(newTeam)){
+                if (listView.getItems().contains(newTeam)) {
                     i--;
-                }else {
+                } else {
                     listView.getItems().add(newTeam);
                 }
             }
-            for(int i = 0; i<diffCAF; i++){
+            for (int i = 0; i < diffCAF; i++) {
                 Random rand = new Random();
                 int int_random = rand.nextInt(55);
                 Team newTeam = new Team();
                 newTeam = dao.searchByConfederation(dao1.getById(2)).get(int_random);
-                if(listView.getItems().contains(newTeam)){
+                if (listView.getItems().contains(newTeam)) {
                     i--;
-                }else {
+                } else {
                     listView.getItems().add(newTeam);
                 }
             }
-            for(int i = 0; i<diffCONCACAF; i++){
+            for (int i = 0; i < diffCONCACAF; i++) {
                 Random rand = new Random();
                 int int_random = rand.nextInt(34);
                 Team newTeam = new Team();
                 newTeam = dao.searchByConfederation(dao1.getById(3)).get(int_random);
-                if(listView.getItems().contains(newTeam)){
+                if (listView.getItems().contains(newTeam)) {
                     i--;
-                }else {
+                } else {
                     listView.getItems().add(newTeam);
                 }
 
             }
-            for(int i = 0; i<diffCONMEBOL; i++){
+            for (int i = 0; i < diffCONMEBOL; i++) {
                 Random rand = new Random();
                 int int_random = rand.nextInt(9);
                 Team newTeam = new Team();
                 newTeam = dao.searchByConfederation(dao1.getById(4)).get(int_random);
-                if(listView.getItems().contains(newTeam)){
+                if (listView.getItems().contains(newTeam)) {
                     i--;
-                }else {
+                } else {
                     listView.getItems().add(newTeam);
                 }
 
             }
-            for(int i = 0; i<diffOFC; i++){
+            for (int i = 0; i < diffOFC; i++) {
                 Random rand = new Random();
                 int int_random = rand.nextInt(11);
                 Team newTeam = new Team();
                 newTeam = dao.searchByConfederation(dao1.getById(5)).get(int_random);
-                if(listView.getItems().contains(newTeam)){
+                if (listView.getItems().contains(newTeam)) {
                     i--;
-                }else {
+                } else {
                     listView.getItems().add(newTeam);
                 }
 
             }
-            for(int i = 0; i<diffUEFA; i++){
+            for (int i = 0; i < diffUEFA; i++) {
                 Random rand = new Random();
                 int int_random = rand.nextInt(55);
                 Team newTeam = dao.searchByConfederation(dao1.getById(6)).get(int_random);
-                if(listView.getItems().contains(newTeam)){
+                if (listView.getItems().contains(newTeam)) {
                     i--;
-                }else {
+                } else {
                     listView.getItems().add(newTeam);
                 }
             }
 
         }
 
-        for(int i=0; i<listView.getItems().size(); i++){
+        for (int i = 0; i < 48; i++) {
             Finalist finalist = new Finalist();
             finalist.setId(i);
             finalist.setTeam(listView.getItems().get(i));
             DaoFactory.finalistDao().add(finalist);
         }
 
+    }
 
+    public void onClickFinishButton(ActionEvent actionEvent) throws IOException {
 
-        /*Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/GroupsMakingPageController.fxml"));
+        Stage previusStage = (Stage) finishButton.getScene().getWindow();
+        previusStage.close();
+
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/GroupsMakingPage.fxml"));
         Parent root = loader.load();
         stage.setTitle("WC2026");
         stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         stage.setResizable(false);
         stage.getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
-        stage.show(); */
-
-
+        stage.show();
     }
 }
