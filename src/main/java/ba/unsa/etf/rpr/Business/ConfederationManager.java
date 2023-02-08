@@ -2,7 +2,6 @@ package ba.unsa.etf.rpr.Business;
 
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Confederation;
-import ba.unsa.etf.rpr.domain.Team;
 import ba.unsa.etf.rpr.exceptions.MyException;
 
 import java.util.List;
