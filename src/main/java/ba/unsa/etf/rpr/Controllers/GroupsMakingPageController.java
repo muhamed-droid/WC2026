@@ -183,6 +183,94 @@ public class GroupsMakingPageController {
         peru.setTeamName("Peru");
 
 
+        Team newZealand = new Team();
+        newZealand.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(4));
+        newZealand.setAbbreviation("NZE");
+        newZealand.setTeamName("New Zealand");
+
+
+        Team italy = new Team();
+        italy.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        italy.setAbbreviation("ITA");
+        italy.setTeamName("Italy");
+
+        Team france = new Team();
+        france.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        france.setAbbreviation("FRA");
+        france.setTeamName("France");
+
+        Team spain = new Team();
+        spain.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        spain.setAbbreviation("SPA");
+        spain.setTeamName("Spain");
+
+        Team germany = new Team();
+        germany.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        germany.setAbbreviation("GER");
+        germany.setTeamName("Germany");
+
+
+        Team england = new Team();
+        england.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        england.setAbbreviation("ENG");
+        england.setTeamName("England");
+
+        Team BiH = new Team();
+        BiH.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        BiH.setAbbreviation("BIH");
+        BiH.setTeamName("Bosnia and Herzegovina");
+
+        Team croatia = new Team();
+        croatia.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        croatia.setAbbreviation("CRO");
+        croatia.setTeamName("Croatia");
+
+        Team serbia = new Team();
+        serbia.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        serbia.setAbbreviation("SER");
+        serbia.setTeamName("Serbia");
+
+        Team denmark = new Team();
+        denmark.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        denmark.setAbbreviation("DEN");
+        denmark.setTeamName("Denmark");
+
+        Team netherlands = new Team();
+        netherlands.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        netherlands.setAbbreviation("NED");
+        netherlands.setTeamName("Netherlands");
+
+        Team belgium = new Team();
+        belgium.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        belgium.setAbbreviation("BEL");
+        belgium.setTeamName("Belgium");
+
+        Team sweden = new Team();
+        sweden.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        sweden.setAbbreviation("SWE");
+        sweden.setTeamName("Sweden");
+
+
+        Team portugal = new Team();
+        portugal.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        portugal.setAbbreviation("POR");
+        portugal.setTeamName("Portugal");
+
+        Team switzerland = new Team();
+        switzerland.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        switzerland.setAbbreviation("SWI");
+        switzerland.setTeamName("Switzerland");
+
+        Team turkey = new Team();
+        turkey.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        turkey.setAbbreviation("TUR");
+        turkey.setTeamName("Turkey");
+
+        Team norway = new Team();
+        norway.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(5));
+        norway.setAbbreviation("NOR");
+        norway.setTeamName("Norway");
+
 
         listView.getItems().add(canada);
         listView.getItems().add(mexico);
@@ -211,6 +299,32 @@ public class GroupsMakingPageController {
         listView.getItems().add(morocco);
         listView.getItems().add(cameroon);
 
+        listView.getItems().add(argentina);
+        listView.getItems().add(brazil);
+        listView.getItems().add(colombia);
+        listView.getItems().add(uruguay);
+        listView.getItems().add(paraguay);
+        listView.getItems().add(peru);
+        listView.getItems().add(chile);
+
+        listView.getItems().add(newZealand);
+
+        listView.getItems().add(germany);
+        listView.getItems().add(netherlands);
+        listView.getItems().add(belgium);
+        listView.getItems().add(england);
+        listView.getItems().add(BiH);
+        listView.getItems().add(croatia);
+        listView.getItems().add(denmark);
+        listView.getItems().add(serbia);
+        listView.getItems().add(sweden);
+        listView.getItems().add(switzerland);
+        listView.getItems().add(spain);
+        listView.getItems().add(portugal);
+        listView.getItems().add(norway);
+        listView.getItems().add(italy);
+        listView.getItems().add(france);
+        listView.getItems().add(turkey);
 
 
 
