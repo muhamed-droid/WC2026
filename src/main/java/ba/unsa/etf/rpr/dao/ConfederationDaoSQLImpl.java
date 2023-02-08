@@ -4,9 +4,8 @@ package ba.unsa.etf.rpr.dao;
 import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.exceptions.MyException;
 
-import java.sql.*;
-import java.util.Collections;
-import java.util.List;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Map;
 import java.util.TreeMap;
 
