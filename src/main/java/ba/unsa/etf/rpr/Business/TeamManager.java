@@ -42,10 +42,4 @@ public class TeamManager {
     public Team add(Team t) throws MyException{
         return DaoFactory.teamDao().add(t);
     }
-
-    /*public Team randomQuote() throws MyException{
-        Team t = DaoFactory.teamDao().randomTeam();
-
-        return t;
-    }*/
 }
