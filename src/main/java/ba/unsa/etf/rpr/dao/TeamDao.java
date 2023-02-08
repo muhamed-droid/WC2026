@@ -24,9 +24,9 @@ public interface TeamDao extends Dao<Team> {
     List<Team> searchByConfederation(Confederation confederation);
 
     /**
-     * Returns all teams that contains given text.
+     * Returns all teams from specific group.
      *
-     * @param group search string for teams
+     * @param group is given as specific group
      * @return list of teams
      */
     List<Team> searchByGroup(Group group);
