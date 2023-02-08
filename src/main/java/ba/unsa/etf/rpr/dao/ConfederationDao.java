@@ -4,7 +4,7 @@ import ba.unsa.etf.rpr.domain.Confederation;
 
 /**
  * ConfederationDao class, crucial part for dao layer implementation
- * It's main purpose is to extends interface
+ * It's main purpose is to extend interface
  *
  * @author Muhamed-droid
  */
