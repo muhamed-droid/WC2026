@@ -11,9 +11,22 @@ import java.util.TreeMap;
 public class FinalistDaoSQLImpl  extends AbstractDao<Finalist> implements FinalistDao{
 
     private static  FinalistDaoSQLImpl instance = null;
+
+    /**
+     * @constructor that calls super
+     *
+     * @author muhamed-droid
+     */
     public FinalistDaoSQLImpl() {
         super("finalists");
     }
+
+    /**
+     *
+     * @return instance of FinalistDaoSQLImpl
+     *
+     * @author muhamed-droid
+     */
 
     public static FinalistDaoSQLImpl getInstance(){
         if(instance==null)
@@ -21,6 +34,13 @@ public class FinalistDaoSQLImpl  extends AbstractDao<Finalist> implements Finali
         return instance;
     }
 
+    /**
+     *
+     * @return void
+     * It removes Instance
+     *
+     * @author muhamed-droid
+     */
     public static void removeInstance(){
         if(instance!=null)
             instance=null;
