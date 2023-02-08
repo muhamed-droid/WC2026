@@ -4,7 +4,7 @@ import ba.unsa.etf.rpr.domain.Finalist;
 
 
 /**
- * ConfederationDao class, crucial part for dao layer implementation
+ * FinalistDao class, crucial part for dao layer implementation
  * It's main purpose is to extend interface
  *
  * @author Muhamed-droid
