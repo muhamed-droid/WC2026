@@ -300,7 +300,7 @@ public class GroupsMakingPageController {
         choiceBox1.getItems().add(jamaica);
         choiceBox1.getItems().add(panama);
         choiceBox1.getItems().add(honduras);
-        choiceBox1.getItems().add(panama);
+        choiceBox1.getItems().add(costaRica);
 
         choiceBox1.getItems().add(japan);
         choiceBox1.getItems().add(australia);
@@ -432,7 +432,7 @@ public class GroupsMakingPageController {
             previusStage.close();
 
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/GroupsMakingPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainApp.fxml"));
             Parent root = loader.load();
             stage.setTitle("WC2026");
             stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
