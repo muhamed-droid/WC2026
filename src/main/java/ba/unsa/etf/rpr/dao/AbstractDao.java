@@ -46,6 +46,11 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
     }
 
+    /**
+     * no params
+     * @return Connection to database
+     * @author muhamed-droid
+     */
     public static Connection getConnection(){
         return AbstractDao.connection;
     }
@@ -83,6 +88,12 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
             throw new MyException(e.getMessage(), e);
         }
     }
+
+    /**
+     * @param item, for adding that item to specific table in database
+     * @return item
+     * @author muhamed-droid
+     */
 
     public T add(T item) throws MyException{
         Map<String, Object> row = object2row(item);
