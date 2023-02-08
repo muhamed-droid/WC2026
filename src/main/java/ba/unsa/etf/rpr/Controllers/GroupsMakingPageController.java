@@ -36,7 +36,44 @@ public class GroupsMakingPageController {
         usa.setAbbreviation("USA");
         usa.setTeamName("United states");
 
+        Team jamaica = new Team();
+        canada.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        canada.setAbbreviation("JAM");
+        canada.setTeamName("Jamaica");
+
+        Team honduras = new Team();
+        mexico.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        mexico.setAbbreviation("HON");
+        mexico.setTeamName("Honduras");
+
+        Team costaRica = new Team();
+        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        usa.setAbbreviation("CRC");
+        usa.setTeamName("Costa Rica");
+
+        Team panama = new Team();
+        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(2));
+        usa.setAbbreviation("PAN");
+        usa.setTeamName("Panama");
+
+        Team japan = new Team();
+        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        usa.setAbbreviation("JAP");
+        usa.setTeamName("Japan");
+
+        Team australia = new Team();
+        usa.setConfederation(FXCollections.observableList(confederationManager.getAll()).get(0));
+        usa.setAbbreviation("AUS");
+        usa.setTeamName("Australia");
+
+
         listView.getItems().add(canada);
+        listView.getItems().add(mexico);
+        listView.getItems().add(usa);
+        listView.getItems().add(jamaica);
+        listView.getItems().add(panama);
+        listView.getItems().add(honduras);
+        listView.getItems().add(panama);
         listView.getItems().add(mexico);
         listView.getItems().add(usa);
 
