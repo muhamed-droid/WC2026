@@ -148,7 +148,7 @@ public class TeamsSelectingPageController {
         newTeam = choiceBox2.getValue();
         newTeam.setConfederation(choiceBox1.getValue());
 
-        if(listView.getItems().size()==48){
+        if(listView.getItems().size()<48){
 
             if(!listView.getItems().contains(newTeam)){
 
@@ -174,15 +174,12 @@ public class TeamsSelectingPageController {
             }
 
         }else {
-
-            Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(""));
-            Parent root = loader.load();
-            stage.setTitle("WC2026");
-            stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-            stage.setResizable(false);
-            stage.getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
-            stage.show();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("WC2026");
+            alert.setHeaderText("Warning!");
+            alert.setContentText("You already added 48 teams, press finish!");
+            ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
+            alert.showAndWait();
 
         }
 
