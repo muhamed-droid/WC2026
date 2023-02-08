@@ -24,4 +24,7 @@ public class DaoFactory {
     public static TableDao tableDao(){
         return tableDao;
     }
+
+    public static FinalistDao finalistDao() {return finalistDao();}
+
 }
