@@ -21,7 +21,7 @@
             <ChoiceBox fx:id="choiceBox2" prefHeight="25.0" prefWidth="303.0" />
          </children>
       </HBox>
-      <Button fx:id="addButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="617.0" text="Add" />
+      <Button fx:id="addButton" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="25.0" prefWidth="617.0" text="Add" />
       <Pagination fx:id="pagination" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </VBox>
