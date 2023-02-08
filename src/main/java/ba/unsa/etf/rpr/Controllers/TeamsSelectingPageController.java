@@ -173,8 +173,11 @@ public class TeamsSelectingPageController {
             alert.showAndWait();
 
         }
+    }
 
+    public void onClickFinishButton(ActionEvent actionEvent) {
+        if(listView.getItems().size()<48){
 
-
+        }
     }
 }
