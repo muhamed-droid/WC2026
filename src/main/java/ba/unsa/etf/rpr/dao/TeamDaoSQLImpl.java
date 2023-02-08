@@ -223,6 +223,7 @@ public class TeamDaoSQLImpl extends AbstractDao<Team> implements TeamDao {
         row.put("id", object.getId());
         row.put("team_name", object.getTeamName());
         row.put("abbreviation", object.getAbbreviation());
+        row.put("confederation_id", object.getConfederation().getId());
         return row;
     }
 
