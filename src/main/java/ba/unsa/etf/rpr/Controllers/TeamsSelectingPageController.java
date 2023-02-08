@@ -292,16 +292,18 @@ public class TeamsSelectingPageController {
 
         }
 
-        for (int i = 0; i < 48; i++) {
-            Finalist finalist = new Finalist();
-            finalist.setId(i);
-            finalist.setTeam(listView.getItems().get(i));
-            DaoFactory.finalistDao().add(finalist);
-        }
+
 
     }
 
     public void onClickFinishButton(ActionEvent actionEvent) throws IOException {
+
+        for (int i = 0; i < 48; i++) {
+            Finalist finalist = new Finalist();
+            finalist.setId(i+1);
+            finalist.setTeam(listView.getItems().get(i));
+            DaoFactory.finalistDao().add(finalist);
+        }
 
         Stage previusStage = (Stage) finishButton.getScene().getWindow();
         previusStage.close();

@@ -9,7 +9,7 @@ import javafx.scene.control.Pagination;
 public class GroupsMakingPageController {
 
     @FXML
-    private ListView<Team> listView = new ListView<Team>();
+    private ListView<Team> listView = new ListView<>();
 
     @FXML
     private Pagination pagination = new Pagination();

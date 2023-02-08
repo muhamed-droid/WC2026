@@ -3,10 +3,6 @@ Z
 *src/test/java/ba/unsa/etf/rpr/AppTest.java,9\b\9bdae70314931d22cd9741c6381ebe4f05ddbbe7
 `
 0src/main/java/ba/unsa/etf/rpr/domain/Idable.java,1\0\1089e0b50000999ff509ccb1c536ba9caa5d3183
-_
-/src/main/java/ba/unsa/etf/rpr/dao/TableDao.java,7\2\729d06e449ace01061370a31d03bf94894fe3eba
-i
-9src/main/java/ba/unsa/etf/rpr/exceptions/MyException.java,7\4\74f789daa1a7cea693a6e47a8ca93c06efd36317
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 p
@@ -21,15 +17,7 @@ _
 /src/main/java/ba/unsa/etf/rpr/domain/Table.java,9\0\9072058a6b5e1fe09f6ead1be8ec10c5649eff6f
 X
 (src/main/java/ba/unsa/etf/rpr/AppFX.java,6\2\622df6f0b962fdbad04c0d810f003c386a56a9f1
-^
-.src/main/java/ba/unsa/etf/rpr/domain/Team.java,c\4\c4809ba23ecc6c068e2853a238584b8bf35df36c
 g
 7src/main/java/ba/unsa/etf/rpr/dao/ConfederationDao.java,f\2\f2e08a0d98c8efc92ab03dfed77ea03fbba59045
-^
-.src/main/java/ba/unsa/etf/rpr/dao/TeamDao.java,d\8\d8c76d0183c6842f690eb72fd570086787d30dfb
-b
-2src/main/java/ba/unsa/etf/rpr/dao/FinalistDao.java,8\7\870064ea875f0a626034dd0222050d74dbf20515
-f
-6src/main/java/ba/unsa/etf/rpr/dao/GroupDaoSQLImpl.java,1\3\137865cc0c0c127927aa6109edb6f1be7191824c
 n
 >src/main/java/ba/unsa/etf/rpr/dao/ConfederationDaoSQLImpl.java,4\9\49839792d9e998c55a33f02d964d8efc89ccaffd

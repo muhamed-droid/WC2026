@@ -1,7 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.domain.Finalist;
-import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.exceptions.MyException;
 
 import java.sql.ResultSet;
