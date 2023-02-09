@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+import static javafx.application.Application.launch;
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 /**
@@ -29,6 +30,7 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 
     public static void main(String[] args) {
+
                 //initialization of dao objects
                 TeamDao dao = new TeamDaoSQLImpl();
                 ConfederationDaoSQLImpl dao1 = new ConfederationDaoSQLImpl();
@@ -59,5 +61,5 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
         myStage.setTitle("Novi prozor");
         myStage.setScene(new Scene(root, 300, 275));
         myStage.show();
-    } */
+    }*/
 }
