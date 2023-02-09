@@ -38,6 +38,8 @@ public class GroupsMakingPageController {
 
     public int counter=0;
 
+
+
     @FXML
     public void initialize() {
 
