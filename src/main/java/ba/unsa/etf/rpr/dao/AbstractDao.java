@@ -75,7 +75,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     }
 
     public List<T> getAll() throws MyException {
-        return executeQuery("SELECT * FROM "+ tableName, null);
+        return executeQuery("SELECT * FROM "+ this.tableName, null);
     }
 
     public void delete(int id) throws MyException {

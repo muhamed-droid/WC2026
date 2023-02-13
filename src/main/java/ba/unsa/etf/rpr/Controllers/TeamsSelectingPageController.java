@@ -18,6 +18,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
@@ -80,7 +81,11 @@ public class TeamsSelectingPageController {
     }
 
      private void getTeam (ActionEvent event) {
-        String selected = choiceBox2.getValue().toString();
+        String selected = new String();
+        if(choiceBox2.getValue()!=null){
+            selected = choiceBox2.getValue().toString();
+        }
+
         selectedTeam.setText(selected);
     }
 
@@ -219,7 +224,35 @@ public class TeamsSelectingPageController {
             int diffOFC = 1 - numOfOFC;
             int diffUEFA = 16 - numOfUEFA;
 
-            for (int i = 0; i < diffAFC; i++) {
+            ArrayList<Integer> listOfId = new ArrayList<Integer>();
+            for(Team t : listView.getItems()) {
+                listOfId.add(t.getId());
+            }
+
+
+            for(Team t: DaoFactory.teamDao().giveMeRandomTeams(listOfId, dao1.getById(6), diffUEFA)){
+                listView.getItems().add(t);
+            }
+            for(Team t: DaoFactory.teamDao().giveMeRandomTeams(listOfId, dao1.getById(5), diffOFC)){
+                listView.getItems().add(t);
+            }
+            for(Team t: DaoFactory.teamDao().giveMeRandomTeams(listOfId, dao1.getById(4), diffCONMEBOL)){
+                listView.getItems().add(t);
+            }
+
+            for(Team t: DaoFactory.teamDao().giveMeRandomTeams(listOfId, dao1.getById(3), diffCONCACAF)){
+                listView.getItems().add(t);
+            }
+
+            for(Team t: DaoFactory.teamDao().giveMeRandomTeams(listOfId, dao1.getById(2), diffCAF)){
+                listView.getItems().add(t);
+            }
+
+            for(Team t: DaoFactory.teamDao().giveMeRandomTeams(listOfId, dao1.getById(1), diffAFC)){
+                listView.getItems().add(t);
+            }
+
+            /*for (int i = 0; i < diffAFC; i++) {
                 Random rand = new Random();
                 int int_random = rand.nextInt(45);
                 Team newTeam = new Team();
@@ -294,7 +327,7 @@ public class TeamsSelectingPageController {
             Finalist finalist = new Finalist();
             finalist.setId(i+1);
             finalist.setTeam(listView.getItems().get(i));
-            DaoFactory.finalistDao().add(finalist);
+            DaoFactory.finalistDao().add(finalist);*/
         }
 
 
@@ -315,5 +348,19 @@ public class TeamsSelectingPageController {
         stage.setResizable(false);
         stage.getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
         stage.show();
+    }
+
+    public void onClickDelete(ActionEvent actionEvent) {
+        if(listView.getSelectionModel().getSelectedIndex()==-1){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("WC2026");
+            alert.setHeaderText("Warning!");
+            alert.setContentText("Please select item to delete!");
+            ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/icons/homeScreenIcon.jpg"));
+            alert.showAndWait();
+        } else {
+            listView.getItems().remove(listView.getSelectionModel().getSelectedIndex());
+        }
+
     }
 }

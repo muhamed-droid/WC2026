@@ -34,6 +34,12 @@ public class TeamDaoSQLImpl extends AbstractDao<Team> implements TeamDao {
         return executeQuery("SELECT * FROM teams WHERE group_id = ?", new Object[]{group});
     }
 
+    @Override
+    public List<Team> giveMeRandomTeams(ArrayList<Integer> id, Confederation c, int limit) {
+
+        return executeQuery("SELECT * FROM teams WHERE confederation_id = ? AND id NOT IN (?) ORDER BY rand() LIMIT ?", new Object[]{c.getId(), id, limit});
+    }
+
 
     private static  TeamDaoSQLImpl instance = null;
     /**

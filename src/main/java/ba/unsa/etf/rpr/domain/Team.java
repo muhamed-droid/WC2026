@@ -67,6 +67,9 @@ public class Team implements Idable{
     public String toString() {
         StringBuilder povratni = new StringBuilder();
         povratni.append(this.getTeamName());
+        povratni.append(" (");
+        povratni.append(this.getConfederation().getAbbreviation());
+        povratni.append(") ");
         return String.valueOf(povratni);
     }
 }

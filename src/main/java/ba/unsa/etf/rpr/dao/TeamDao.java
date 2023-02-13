@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.domain.Confederation;
 import ba.unsa.etf.rpr.domain.Group;
 import ba.unsa.etf.rpr.domain.Team;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,5 +31,7 @@ public interface TeamDao extends Dao<Team> {
      * @return list of teams
      */
     List<Team> searchByGroup(Group group);
+
+    List<Team> giveMeRandomTeams(ArrayList<Integer> id, Confederation c, int limit);
 
 }

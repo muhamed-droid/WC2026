@@ -1,0 +1,29 @@
+
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(Áß‡Ü
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(’æ¾
+Q	java:S125:"<This block of commented-out lines of code should be removed.(’¦ß‡
+P
+java:S1128
+";Remove this unused import 'javafx.application.Application'.(í™şj
+P
+java:S1128"5Remove this unused import 'javafx.event.ActionEvent'.(î•¯¼ıÿÿÿÿ
+N
+java:S1128"3Remove this unused import 'javafx.fxml.FXMLLoader'.(À‡ô³úÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'javafx.scene.Parent'.(²ä¡È
+E
+java:S1128"/Remove this unused import 'javafx.scene.Scene'.(Õü²
+S
+java:S1128"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ
+P
+java:S1128":Remove this unused import 'javafx.scene.layout.StackPane'.(™÷èò
+J
+java:S1128"/Remove this unused import 'javafx.stage.Stage'.(æÄ¸²úÿÿÿÿ
+]
+java:S1128"BRemove this unused import 'javafx.application.Application.launch'.(Ç¢¦çúÿÿÿÿ
+f
+java:S1128"PRemove this unused import 'javafx.scene.control.PopupControl.USE_COMPUTED_SIZE'.(¸ßøÁ
+t
+java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(¦÷Åïÿÿÿÿÿ
+o
+java:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒÚš
